@@ -7,7 +7,7 @@ import { useEffect, useState } from "react";
 // import { Link } from "react-router-dom";
 import { Link, Events, animateScroll as scroll, scrollSpy } from "react-scroll";
 
-import logo from "/src/assets/logo.png";
+import logo from "/src/assets/tech.jpg";
 
 const Navbar = () => {
   // State variable to keep track of whether the menu is open or not.
@@ -57,8 +57,8 @@ const Navbar = () => {
           className={`text-2xl font-bold flex justify-center items-center gap-2 `}
         >
           <img
-            src={"logo"}
-            alt="logo"
+            src={logo}
+            alt="TechSpace_Logo"
             className="md:w-16 md:h-16 w-10 h-10 rounded-md"
           />
         </Link>
@@ -86,7 +86,7 @@ const Navbar = () => {
           <ModeToggle />
           <Button className="hidden lg:flex">Get Started</Button>
           <Menu
-            className="max-lg:block hidden text-3xl cursor-pointer "
+            className="max-lg:block hidden text-3xl cursor-pointer text-black"
             onClick={() => {
               setIsMenuOpen(!isMenuOpen);
             }}
@@ -141,70 +141,13 @@ const Navbar = () => {
       )}
 
       <button
-        className="bg-white w-14 h-14 rounded-full fixed bottom-[3rem] md:right-12 right-6 z-50 flex justify-center items-center cursor-pointer"
+        className="bg-purple-700 text-white w-14 h-14 rounded-full fixed bottom-[3rem] md:right-12 right-6 z-50 flex justify-center items-center cursor-pointer"
         onClick={() => {
           scrollToTop();
         }}
       >
         <ArrowUpFromLine className="text-4xl" />
       </button>
-      {/* <nav className="flex justify-between items-center sm:px-6 lg:px-14 px-3 lg:py-5 py-3 bg-white shadow-lg fixed w-full z-50">
-
-        <a href="/">
-          <div className="flex items-center justify-center gap-2">
-            <img
-              className="md:h-12 h-8 w-8 md:w-12 rounded-full bg-red-400"
-              src="/src/assets/logo.jpg"
-              alt="TechSpace_Logo"
-            />
-            <span className="md:text-xl text-lg font-bold dark:text-slate-900">
-              TechSpace
-            </span>
-          </div>
-        </a>
-
- 
-        <div className="">
-          {navLinks.map((link) => (
-            <a
-              key={link.label}
-              href={link.link}
-              className="hidden lg:inline-block px-8  rounded-md text-md text-t1 font-medium"
-            >
-              {link.label}
-            </a>
-          ))}
-        </div>
-
- 
-        <div className="flex justify-center items-center gap-3">
-          <ModeToggle />
-          <Button className="hidden lg:flex">Get Started</Button>
-
-          <Sheet>
-            <SheetTrigger asChild>
-              <MenuIcon className="h-6 w-6 lg:hidden static" />
-            </SheetTrigger>
-            <SheetContent>
-              <SheetHeader>
-                <SheetTitle>Edit profile</SheetTitle>
-                <SheetDescription>
-                  Make changes to your profile here. Click save when you're
-                  done.
-                </SheetDescription>
-              </SheetHeader>
-              <div className="grid gap-4 py-4">
-                <div className="grid grid-cols-4 items-center gap-4"></div>
-              </div>
-              <SheetFooter>
-                <SheetClose asChild>
-                  <Button type="submit">Save changes</Button>
-                </SheetClose>
-              </SheetFooter>
-            </SheetContent>
-          </Sheet>
-        </div>
-      </nav> */}
     </>
   );
 };
