@@ -89,13 +89,25 @@ export const servicesData: ServiceDataType[] = [
 // --------------------------------------------------------------------------------------
 // Projects Data
 
-import projectImg_1 from "/src/assets/tech.jpg";
-import projectImg_2 from "/src/assets/tech1.jpg";
-import projectImg_3 from "/src/assets/logo.jpg";
-import projectImg_4 from "/src/assets/logo.jpg";
-import projectImg_5 from "/src/assets/logo1.jpg";
-import projectImg_6 from "/src/assets/tech.jpg";
-// Data/ProjectsData.js
+// Web images
+import web_1 from "/src/assets/web.gif";
+import web_2 from "/src/assets/web2.jpg";
+import web_3 from "/src/assets/web3.jpg";
+// import web_4 from "/src/assets/web4.jpg";
+// import web_5 from "/src/assets/web1.jpg";
+
+// mobile images
+import mobile_1 from "/src/assets/mobile1.jpg";
+import mobile_2 from "/src/assets/mobile2.jpg";
+import mobile_3 from "/src/assets/mobile3.jpg";
+// import mobile_4 from "/src/assets/mobile4.jpg";
+// import mobile_5 from "/src/assets/mobile5.jpg";
+
+// UI/UX Design images
+import ux_1 from "/src/assets/tech.jpg";
+import ux_2 from "/src/assets/tech1.jpg";
+import ux_3 from "/src/assets/logo.jpg";
+// import ux_4 from "/src/assets/logo.jpg";
 
 export const projectsData: ProjectsType[] = [
   // Web Development
@@ -103,83 +115,83 @@ export const projectsData: ProjectsType[] = [
     title: "E-commerce Platform",
     description:
       "A fully responsive online store with seamless checkout experience.",
-    image: projectImg_1,
+    image: web_1,
     category: "web development",
     link: "https://example.com/e-commerce",
   },
   {
     title: "Corporate Website",
     description: "Modern and professional website for a Fortune 500 company.",
-    image: projectImg_2,
+    image: web_2,
     category: "web development",
     link: "https://example.com/corporate-website-1",
   },
   {
     title: "Portfolio Website",
     description: "A personal portfolio to showcase skills and projects.",
-    image: projectImg_3,
+    image: web_3,
     category: "web development",
     link: "https://example.com/portfolio-website",
   },
-  {
-    title: "Blog Platform",
-    description: "A blogging platform for writers and readers.",
-    image: "path/to/projectImg_4.jpg",
-    category: "web development",
-    link: "https://example.com/blog-platform",
-  },
-  {
-    title: "Online Learning Portal",
-    description:
-      "An interactive platform for online courses and learning resources.",
-    image: "path/to/projectImg_5.jpg",
-    category: "web development",
-    link: "https://example.com/online-learning",
-  },
+  // {
+  //   title: "Blog Platform",
+  //   description: "A blogging platform for writers and readers.",
+  //   image: web_4,
+  //   category: "web development",
+  //   link: "https://example.com/blog-platform",
+  // },
+  // {
+  //   title: "Online Learning Portal",
+  //   description:
+  //     "An interactive platform for online courses and learning resources.",
+  //   image: web_5,
+  //   category: "web development",
+  //   link: "https://example.com/online-learning",
+  // },
 
   // Mobile Development
   {
     title: "Fitness Tracker App",
     description: "Mobile application for tracking workouts and nutrition.",
-    image: "path/to/projectImg_6.jpg",
+    image: mobile_1,
     category: "mobile development",
     link: "https://example.com/fitness-app",
   },
   {
     title: "Recipe Finder App",
     description: "An application to discover and save recipes.",
-    image: "path/to/projectImg_7.jpg",
+    image: mobile_2,
     category: "mobile development",
     link: "https://example.com/recipe-app",
   },
   {
     title: "Travel Planner App",
     description: "An app to help users plan their travel itineraries.",
-    image: "path/to/projectImg_8.jpg",
+    image: mobile_3,
     category: "mobile development",
     link: "https://example.com/travel-planner",
   },
-  {
-    title: "Expense Tracker App",
-    description: "An application for tracking personal finances and expenses.",
-    image: "path/to/projectImg_9.jpg",
-    category: "mobile development",
-    link: "https://example.com/expense-tracker",
-  },
-  {
-    title: "Language Learning App",
-    description: "An interactive app for learning new languages.",
-    image: "path/to/projectImg_10.jpg",
-    category: "mobile development",
-    link: "https://example.com/language-learning",
-  },
+  // {
+  //   title: "Expense Tracker App",
+  //   description: "An application for tracking personal finances and expenses.",
+  //   image: mobile_3,
+  //   category: "mobile development",
+  //   link: "https://example.com/expense-tracker",
+  // },
+  // {
+  //   title: "Language Learning App",
+  //   description: "An interactive app for learning new languages.",
+  //   image: "path/to/projectImg_10.jpg",
+  //   category: "mobile development",
+  //   link: "https://example.com/language-learning",
+  // },
 
   // UI/UX Design
   {
     title: "E-commerce App Redesign",
     description:
       "UI/UX redesign of a popular e-commerce app to enhance user experience.",
-    image: "path/to/projectImg_11.jpg",
+    image: ux_1,
     category: "ui/ux design",
     link: "https://example.com/ecommerce-redesign",
   },
@@ -187,7 +199,7 @@ export const projectsData: ProjectsType[] = [
     title: "Social Media Dashboard",
     description:
       "Design of a dashboard for managing social media accounts effectively.",
-    image: "path/to/projectImg_12.jpg",
+    image: ux_2,
     category: "ui/ux design",
     link: "https://example.com/social-media-dashboard",
   },
@@ -195,63 +207,63 @@ export const projectsData: ProjectsType[] = [
     title: "Corporate Branding Project",
     description:
       "UI/UX design for a corporate branding project, including logo and website.",
-    image: "path/to/projectImg_13.jpg",
+    image: ux_3,
     category: "ui/ux design",
     link: "https://example.com/corporate-branding",
   },
-  {
-    title: "Mobile App UX Research",
-    description: "User research and testing for a mobile application project.",
-    image: "path/to/projectImg_14.jpg",
-    category: "ui/ux design",
-    link: "https://example.com/mobile-app-research",
-  },
-  {
-    title: "Landing Page Design",
-    description:
-      "Design of a high-converting landing page for a marketing campaign.",
-    image: "path/to/projectImg_15.jpg",
-    category: "ui/ux design",
-    link: "https://example.com/landing-page-design",
-  },
+  // {
+  //   title: "Mobile App UX Research",
+  //   description: "User research and testing for a mobile application project.",
+  //   image: ux_4,
+  //   category: "ui/ux design",
+  //   link: "https://example.com/mobile-app-research",
+  // },
+  // {
+  //   title: "Landing Page Design",
+  //   description:
+  //     "Design of a high-converting landing page for a marketing campaign.",
+  //   image:ux_4,
+  //   category: "ui/ux design",
+  //   link: "https://example.com/landing-page-design",
+  // },
 
   // Digital Marketing
-  {
-    title: "SEO Optimization Project",
-    description:
-      "SEO strategy and implementation for a local business website.",
-    image: "path/to/projectImg_16.jpg",
-    category: "digital marketing",
-    link: "https://example.com/seo-optimization",
-  },
-  {
-    title: "Social Media Marketing Campaign",
-    description:
-      "A comprehensive marketing campaign across various social media platforms.",
-    image: "path/to/projectImg_17.jpg",
-    category: "digital marketing",
-    link: "https://example.com/social-media-campaign",
-  },
-  {
-    title: "Email Marketing Strategy",
-    description: "Development and execution of an email marketing strategy.",
-    image: "path/to/projectImg_18.jpg",
-    category: "digital marketing",
-    link: "https://example.com/email-marketing",
-  },
-  {
-    title: "Content Marketing Plan",
-    description:
-      "Creation of a content marketing strategy to increase brand visibility.",
-    image: "path/to/projectImg_19.jpg",
-    category: "digital marketing",
-    link: "https://example.com/content-marketing",
-  },
-  {
-    title: "Pay-Per-Click Advertising",
-    description: "Management of a PPC advertising campaign for a startup.",
-    image: "path/to/projectImg_20.jpg",
-    category: "digital marketing",
-    link: "https://example.com/ppc-advertising",
-  },
+  // {
+  //   title: "SEO Optimization Project",
+  //   description:
+  //     "SEO strategy and implementation for a local business website.",
+  //   image: "path/to/projectImg_16.jpg",
+  //   category: "digital marketing",
+  //   link: "https://example.com/seo-optimization",
+  // },
+  // {
+  //   title: "Social Media Marketing Campaign",
+  //   description:
+  //     "A comprehensive marketing campaign across various social media platforms.",
+  //   image: "path/to/projectImg_17.jpg",
+  //   category: "digital marketing",
+  //   link: "https://example.com/social-media-campaign",
+  // },
+  // {
+  //   title: "Email Marketing Strategy",
+  //   description: "Development and execution of an email marketing strategy.",
+  //   image: "path/to/projectImg_18.jpg",
+  //   category: "digital marketing",
+  //   link: "https://example.com/email-marketing",
+  // },
+  // {
+  //   title: "Content Marketing Plan",
+  //   description:
+  //     "Creation of a content marketing strategy to increase brand visibility.",
+  //   image: "path/to/projectImg_19.jpg",
+  //   category: "digital marketing",
+  //   link: "https://example.com/content-marketing",
+  // },
+  // {
+  //   title: "Pay-Per-Click Advertising",
+  //   description: "Management of a PPC advertising campaign for a startup.",
+  //   image: "path/to/projectImg_20.jpg",
+  //   category: "digital marketing",
+  //   link: "https://example.com/ppc-advertising",
+  // },
 ];
