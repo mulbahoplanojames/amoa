@@ -1,6 +1,5 @@
 import { useState } from "react";
 // import { Routes } from "react-router-dom";
-import ButtonScroll from "./ButtonScroll";
 import { Button } from "./ui/button";
 import { projectsData } from "../Data/Data";
 
@@ -42,7 +41,7 @@ const Portfolio = () => {
               key={category}
               onClick={() => category && setSelectedCategory(category)}
               variant="outline"
-              className="mx-2"
+              className="md:mx-2 mx-4 my-2"
             >
               {category && category.charAt(0).toUpperCase() + category.slice(1)}
             </Button>
