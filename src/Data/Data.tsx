@@ -8,8 +8,12 @@ import {
   MonitorCog,
   ServerCog,
 } from "lucide-react";
-import { NavlinksType, ProjectsType, ServiceDataType } from "../Types/Types";
-import { Description } from "@radix-ui/react-dialog";
+import {
+  NavlinksType,
+  ProjectsType,
+  ServiceDataType,
+  TestimonialType,
+} from "../Types/Types";
 
 const navLinks: NavlinksType[] = [
   {
@@ -266,4 +270,51 @@ export const projectsData: ProjectsType[] = [
   //   category: "digital marketing",
   //   link: "https://example.com/ppc-advertising",
   // },
+];
+
+// ---------------------------------------------------------------------------------
+// Testimonial Data
+
+import client_1 from "/src/assets/logo1.jpg";
+import client_2 from "/src/assets/logo.jpg";
+import client_3 from "/src/assets/tech1.jpg";
+import client_4 from "/src/assets/logo.jpg";
+import client_5 from "/src/assets/tech1.jpg";
+
+export const testimonialsData: TestimonialType[] = [
+  {
+    content:
+      "Working with this team was a game-changer for our online presence. They delivered a website that exceeded our expectations and significantly boosted our conversions.",
+    author: "Jane Cooper",
+    role: "CEO, TechCorp",
+    image: client_1,
+  },
+  {
+    content:
+      "The UI/UX design for our app was spot-on. Our users love the intuitive interface, and we've seen a marked increase in user engagement since the redesign.",
+    author: "John Doe",
+    role: "Founder, FitnessPro",
+    image: client_2,
+  },
+  {
+    content:
+      "Their graphic design work perfectly captured our brand essence. The new visual identity has received overwhelmingly positive feedback from our clients and partners.",
+    author: "Alice Smith",
+    role: "Marketing Director, CreativeCo",
+    image: client_3,
+  },
+  {
+    content:
+      "The UI/UX design for our app was spot-on. Our users love the intuitive interface, and we've seen a marked increase in user engagement since the redesign.",
+    author: "John Doe",
+    role: "Founder, FitnessPro",
+    image: client_4,
+  },
+  {
+    content:
+      "Their graphic design work perfectly captured our brand essence. The new visual identity has received overwhelmingly positive feedback from our clients and partners.",
+    author: "Alice Smith",
+    role: "Marketing Director, CreativeCo",
+    image: client_5,
+  },
 ];

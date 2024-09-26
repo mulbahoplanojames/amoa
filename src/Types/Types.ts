@@ -20,3 +20,11 @@ export interface ProjectsType {
   category?: string;
   link?: string;
 }
+
+// testimonial Type
+export interface TestimonialType {
+  content: string;
+  author: string;
+  role: string;
+  image: string;
+}
