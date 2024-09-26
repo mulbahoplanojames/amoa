@@ -26,18 +26,21 @@ const Services = () => {
             </p>
           </div>
 
-          <div className="mt-10">
+          <div className="mt-14">
             <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
               {servicesData.map((service) => (
-                <Card key={service.title} className="dark:bg-white">
+                <Card
+                  key={service.title}
+                  className="dark:bg-white hover:scale-105 transition-all duration-300"
+                >
                   <CardHeader>
-                    <service.icon className="h-8 w-8 text-indigo-600 mb-4" />
-                    <CardTitle className="text-gray-900">
+                    <service.icon className="h-10  w-12 text-indigo-600 mb-4" />
+                    <CardTitle className="text-gray-900 text-xl ">
                       {service.title}
                     </CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <CardDescription className="text-gray-500">
+                    <CardDescription className="text-gray-500 md:text-base text-lg">
                       {service.description}
                     </CardDescription>
                   </CardContent>
