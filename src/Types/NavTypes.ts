@@ -1,6 +1,6 @@
 export interface NavlinksType {
   label: string;
-  link: string;
+  path: string;
 }
 
 // export default NavlinksType;

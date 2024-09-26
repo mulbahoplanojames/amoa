@@ -1,4 +1,5 @@
-import Hero from "./Hero";
+import Hero from "./components/Hero";
+import Services from "./components/Services";
 import Navbar from "./Layouts/Navbar/Navbar";
 
 const App = () => {
@@ -7,6 +8,7 @@ const App = () => {
       <Navbar />
       <main className="flex-grow">
         <Hero />
+        <Services />
       </main>
     </div>
   );
