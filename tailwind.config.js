@@ -57,5 +57,10 @@ export default {
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  variants: {
+    extend: {
+      scrollbar: ["rounded"],
+    },
+  },
+  plugins: [require("tailwindcss-animate", "tailwind-scrollbar-hide")],
 };
