@@ -1,4 +1,3 @@
-import React from "react";
 import { testimonialsData } from "../Data/Data";
 
 const Testimonial = () => {
