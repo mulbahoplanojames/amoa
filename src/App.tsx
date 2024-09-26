@@ -1,9 +1,13 @@
-import { Button } from "./components/ui/button";
+import Hero from "./Hero";
+import Navbar from "./Layouts/Navbar/Navbar";
 
 const App = () => {
   return (
-    <div>
-      <Button>Hello</Button>
+    <div className="min-h-screen flex flex-col">
+      <Navbar />
+      <main className="flex-grow">
+        <Hero />
+      </main>
     </div>
   );
 };
