@@ -2,6 +2,7 @@ import Hero from "./components/Hero";
 import Portfolio from "./components/Portfolio";
 import Services from "./components/Services";
 import Testimonial from "./components/Testimonial";
+import Footer from "./Layouts/Footer/Footer";
 import Navbar from "./Layouts/Navbar/Navbar";
 
 const App = () => {
@@ -13,6 +14,7 @@ const App = () => {
         <Services />
         <Portfolio />
         <Testimonial />
+        <Footer />
       </main>
     </div>
   );

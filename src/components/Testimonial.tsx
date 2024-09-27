@@ -25,17 +25,17 @@ const Testimonial = () => {
           opts={{
             align: "start",
           }}
-          className="w-full mx-auto mt-6"
+          className="w-full mx-auto mt-12"
         >
           <CarouselContent>
             {testimonialsData.map((testimonial, index) => (
               <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
                 <div className="p-1">
-                  <Card>
+                  <Card className="dark:bg-white">
                     <CardContent className="flex flex-col rounded-lg shadow-lg overflow-hidden p-6">
                       <div className="flex-1">
                         <p className="text-lg font-medium text-gray-900">
-                          "{testimonial.content}"
+                          {testimonial.content}
                         </p>
                       </div>
                       <div className="mt-6 flex items-center">
@@ -63,8 +63,8 @@ const Testimonial = () => {
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious className="absolute left-0 md:-left-12" />
-          <CarouselNext className="absolute right-0 md:-right-12" />
+          <CarouselPrevious className="absolute -left-5 md:-left-12" />
+          <CarouselNext className="absolute -right-5 md:-right-12" />
         </Carousel>
 
         {/* <div className="mt-10">
