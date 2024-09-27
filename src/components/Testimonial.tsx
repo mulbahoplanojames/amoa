@@ -1,5 +1,14 @@
 import { testimonialsData } from "../Data/Data";
 
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+import { Card, CardContent } from "./ui/card";
+
 const Testimonial = () => {
   return (
     <section className="md:py-20 py-12 bg-gray-50">
@@ -12,7 +21,53 @@ const Testimonial = () => {
             What Our Clients Say
           </p>
         </div>
-        <div className="mt-10">
+        <Carousel
+          opts={{
+            align: "start",
+          }}
+          className="w-full mx-auto mt-6"
+        >
+          <CarouselContent>
+            {testimonialsData.map((testimonial, index) => (
+              <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+                <div className="p-1">
+                  <Card>
+                    <CardContent className="flex flex-col rounded-lg shadow-lg overflow-hidden p-6">
+                      <div className="flex-1">
+                        <p className="text-lg font-medium text-gray-900">
+                          "{testimonial.content}"
+                        </p>
+                      </div>
+                      <div className="mt-6 flex items-center">
+                        <div className="flex-shrink-0">
+                          <img
+                            className="h-10 w-10 rounded-full"
+                            src={testimonial.image}
+                            alt={testimonial.author}
+                            width={40}
+                            height={40}
+                          />
+                        </div>
+                        <div className="ml-3">
+                          <p className="text-sm font-medium text-gray-900">
+                            {testimonial.author}
+                          </p>
+                          <p className="text-sm text-gray-500">
+                            {testimonial.role}
+                          </p>
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
+                </div>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          <CarouselPrevious className="absolute left-0" />
+          <CarouselNext className="absolute right-0" />
+        </Carousel>
+
+        {/* <div className="mt-10">
           <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {testimonialsData.map((testimonial, index) => (
               <div
@@ -48,7 +103,7 @@ const Testimonial = () => {
               </div>
             ))}
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );
