@@ -11,7 +11,7 @@ import { Card, CardContent } from "./ui/card";
 
 const Testimonial = () => {
   return (
-    <section className="md:py-20 py-12 bg-gray-50">
+    <section className="md:py-20 py-12 bg-gray-50" id="/testimonials">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           <h2 className="text-base text-indigo-600 font-semibold tracking-wide uppercase">

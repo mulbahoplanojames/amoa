@@ -1,3 +1,4 @@
+import ContactUs from "./components/ContactUs";
 import Hero from "./components/Hero";
 import Portfolio from "./components/Portfolio";
 import Services from "./components/Services";
@@ -14,6 +15,7 @@ const App = () => {
         <Services />
         <Portfolio />
         <Testimonial />
+        <ContactUs />
         <Footer />
       </main>
     </div>
