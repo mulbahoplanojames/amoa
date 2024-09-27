@@ -3,13 +3,7 @@ import { Link } from "react-scroll";
 
 import { Facebook, Instagram, Twitter, Linkedin } from "lucide-react";
 import { Input } from "@/components/ui/input";
-
-const SolutionsData = [
-  "Website Design",
-  "App Development",
-  "UI/UX Design",
-  "Graphic Design",
-];
+import SolutionsData, { SupportData } from "@/Data/Data_2";
 
 const Footer = () => {
   return (
@@ -41,18 +35,16 @@ const Footer = () => {
                     Support
                   </h3>
                   <ul className="mt-4 space-y-4">
-                    {["Pricing", "Documentation", "Guides", "API Status"].map(
-                      (item) => (
-                        <li key={item}>
-                          <Link
-                            to="#"
-                            className="text-base text-gray-300 hover:text-white"
-                          >
-                            {item}
-                          </Link>
-                        </li>
-                      )
-                    )}
+                    {SupportData.map((item) => (
+                      <li key={item}>
+                        <Link
+                          to="#"
+                          className="text-base text-gray-300 hover:text-white"
+                        >
+                          {item}
+                        </Link>
+                      </li>
+                    ))}
                   </ul>
                 </div>
               </div>
