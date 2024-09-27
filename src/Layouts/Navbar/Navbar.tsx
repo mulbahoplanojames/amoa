@@ -84,7 +84,19 @@ const Navbar = () => {
         {/*//! Contact Us button */}
         <div className="lg:gap-x-6 gap-x-4 flex items-center justify-center">
           <ModeToggle />
-          <Button className="hidden lg:flex">Get Started</Button>
+          <Link
+            to="/contact"
+            activeClass="active"
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={500}
+            onSetActive={handleSetActive}
+          >
+            <Button className="hidden lg:flex bg-[#0f172a] text-white hover:bg-[#111728]">
+              Contact Us
+            </Button>
+          </Link>
           <Menu
             className="max-lg:block hidden text-3xl cursor-pointer text-black"
             onClick={() => {

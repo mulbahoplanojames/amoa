@@ -122,7 +122,10 @@ const Footer = () => {
                   placeholder="Enter your email"
                 />
                 <div className="mt-3 rounded-md sm:mt-0 sm:ml-3 sm:flex-shrink-0">
-                  <Button type="submit" className="w-full">
+                  <Button
+                    type="submit"
+                    className="w-full  bg-[#0f172a] text-white hover:bg-[#111728]"
+                  >
                     Subscribe
                   </Button>
                 </div>
