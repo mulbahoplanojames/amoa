@@ -63,8 +63,8 @@ const Testimonial = () => {
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious className="absolute -left-5 md:-left-12" />
-          <CarouselNext className="absolute -right-5 md:-right-12" />
+          <CarouselPrevious className="absolute -left-5 md:-left-8" />
+          <CarouselNext className="absolute -right-5 md:-right-8" />
         </Carousel>
 
         {/* <div className="mt-10">
