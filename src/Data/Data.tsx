@@ -29,8 +29,8 @@ const navLinks: NavlinksType[] = [
     path: "/about",
   },
   {
-    label: "Contact",
-    path: "/contact",
+    label: "Testimonials",
+    path: "/testimonials",
   },
 ];
 

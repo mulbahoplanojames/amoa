@@ -13,12 +13,23 @@ export const SupportData = [
   "Privacy Policy",
 ];
 
-export const CompanyData = ["About", "Blog", "Jobs", "Press", "Partners"];
-
-export const ContactData = [
-  "Contact",
-  "Twitter",
-  "Instagram",
-  "LinkedIn",
-  "Facebook",
+export const CompanyData = [
+  {
+    label: "Service",
+    path: "/services",
+  },
+  {
+    label: "Portfolio",
+    path: "/portfolio",
+  },
+  {
+    label: "About",
+    path: "/about",
+  },
+  {
+    label: "Testimonials",
+    path: "/testimonials",
+  },
 ];
+
+export const privacyData = ["Privacy", "Terms"];

@@ -3,7 +3,16 @@ import { Link } from "react-scroll";
 
 import { Facebook, Instagram, Twitter, Linkedin } from "lucide-react";
 import { Input } from "@/components/ui/input";
-import SolutionsData, { SupportData } from "@/Data/Data_2";
+import SolutionsData, {
+  CompanyData,
+  privacyData,
+  SupportData,
+} from "@/Data/Data_2";
+
+// Function to handle the activation of a link.
+const handleSetActive = (to: string) => {
+  console.log(to);
+};
 
 const Footer = () => {
   return (
@@ -54,18 +63,22 @@ const Footer = () => {
                     Company
                   </h3>
                   <ul className="mt-4 space-y-4">
-                    {["About", "Blog", "Jobs", "Press", "Partners"].map(
-                      (item) => (
-                        <li key={item}>
-                          <Link
-                            to="#"
-                            className="text-base text-gray-300 hover:text-white"
-                          >
-                            {item}
-                          </Link>
-                        </li>
-                      )
-                    )}
+                    {CompanyData.map((item) => (
+                      <li key={item.label}>
+                        <Link
+                          to={item.path}
+                          className="text-base text-gray-300 hover:text-white"
+                          activeClass="active"
+                          spy={true}
+                          smooth={true}
+                          offset={-70}
+                          duration={500}
+                          onSetActive={handleSetActive}
+                        >
+                          {item.label}
+                        </Link>
+                      </li>
+                    ))}
                   </ul>
                 </div>
                 <div className="mt-12 md:mt-0">
@@ -73,7 +86,7 @@ const Footer = () => {
                     Legal
                   </h3>
                   <ul className="mt-4 space-y-4">
-                    {["Privacy", "Terms"].map((item) => (
+                    {privacyData.map((item) => (
                       <li key={item}>
                         <Link
                           to="#"
@@ -116,7 +129,7 @@ const Footer = () => {
               </form>
             </div>
           </div>
-          {/* <div className="mt-8 border-t border-gray-700 pt-8 md:flex md:items-center md:justify-between">
+          <div className="mt-8 border-t border-gray-700 pt-8 md:flex md:items-center md:justify-between">
             <div className="flex space-x-6 md:order-2">
               {[
                 { name: "Facebook", icon: Facebook },
@@ -135,9 +148,10 @@ const Footer = () => {
               ))}
             </div>
             <p className="mt-8 text-base text-gray-400 md:mt-0 md:order-1">
-              &copy; 2023 Your Company, Inc. All rights reserved.
+              &copy; {new Date().getFullYear()} TechSpace, Inc. All rights
+              reserved.
             </p>
-          </div> */}
+          </div>
         </div>
       </footer>
     </>
