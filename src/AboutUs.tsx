@@ -9,7 +9,10 @@ import aboutImg_4 from "/src/assets/ab3.jpg";
 const AboutUs = () => {
   return (
     <>
-      <section className="grid md:grid-cols-2 grid-cols-1 md:gap-8 gap-y-4 place-items-center md:px-16 px-2 md:py-20 py-14">
+      <section
+        className="grid md:grid-cols-2 grid-cols-1 md:gap-8 gap-y-4 place-items-center md:px-16 px-2 md:py-20 py-14"
+        id="/about"
+      >
         <div className="bg-blue-30 w-full h-[400px] p-2 relative">
           <div className="md:w-44 w-40  h-40  absolute bottom-1 md:right-32 right-2 z-10 overflow-hidden ">
             <img
