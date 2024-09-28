@@ -1,3 +1,4 @@
+import AboutUs from "./AboutUs";
 import ContactUs from "./components/ContactUs";
 import Hero from "./components/Hero";
 import Portfolio from "./components/Portfolio";
@@ -13,6 +14,7 @@ const App = () => {
       <Navbar />
       <main className="flex-grow">
         <Hero />
+        <AboutUs />
         <Services />
         <Portfolio />
         <WhyChooseUs />
