@@ -6,28 +6,28 @@ const AboutUs = () => {
     <>
       <section className="grid md:grid-cols-2 grid-cols-1 md:gap-8 gap-y-4 place-items-center md:px-16 px-2 md:py-20 py-14">
         <div className="bg-blue-30 w-full h-[400px] p-2 relative">
-          <div className="bg-yellow-200 md:w-64 w-44 md:h-56 h-40 absolute bottom-1 right-2 z-10 overflow-hidden md:block hidden">
+          <div className="md:w-44 w-40  h-40  absolute bottom-1 md:right-32 right-2 z-10 overflow-hidden ">
             <img
-              src="/src/assets/ab1.jpg"
+              src="/src/assets/wave1.png"
               alt=""
               className="w-full h-full object-cover"
             />
           </div>
-          <div className="bg-yellow-200 md:w-64 w-44 md:h-56 h-40 absolute bottom-1 right-2 z-10 overflow-hidden block md:hidden">
+          <div className=" md:w-44 w-40  h-40 absolute top-1 md:left-10 -left-3 z-10 overflow-hidden ">
             <img
-              src="/src/assets/ab1.jpg"
+              src="/src/assets/wave1.png"
               alt=""
               className="w-full h-full object-cover"
             />
           </div>
-          <div className="bg-green-200 md:w-64 w-60 h-56 absolute top-2 md:right-[6rem] right-2 overflow-hidden">
+          <div className=" md:w-64 w-60 h-56 absolute top-2 md:right-[6rem] right-2 overflow-hidden">
             <img
               src="/src/assets/ab2.jpg"
               alt=""
               className="w-full h-full object-cover"
             />
           </div>
-          <div className="bg-pink-200 md:w-64 w-52 h-56 absolute bottom-2 left-2 overflow-hidden">
+          <div className=" md:w-64 w-52 h-56 absolute bottom-2 left-2 overflow-hidden">
             <img
               src="/src/assets/ab3.jpg"
               alt=""
@@ -35,7 +35,7 @@ const AboutUs = () => {
             />
           </div>
         </div>
-        <div className="bg-red-300 w-full h-fit py-8 md:px-2 px-1">
+        <div className=" w-full h-fit py-8 md:px-2 px-1">
           <h2 className="text-base text-indigo-600 font-semibold tracking-wide uppercase md:pb-4 pb-3">
             About Us
           </h2>
