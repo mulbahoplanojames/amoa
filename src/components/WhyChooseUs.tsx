@@ -27,7 +27,7 @@ const WhyChooseUs = () => {
           </div>
         </div>
 
-        <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-4 gap-y-6 md:px-14 px-2 mt-12 place-items-center">
+        <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-6 gap-y-6 md:px-14 px-2 mt-12 place-items-center">
           {whyChooseUsData.map((service) => (
             <Card
               key={service.title}
