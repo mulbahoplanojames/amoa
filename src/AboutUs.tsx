@@ -1,6 +1,11 @@
 import { Link } from "react-scroll";
 import { Button } from "./components/ui/button";
 
+import aboutImg_1 from "/src/assets/wave1.png";
+import aboutImg_2 from "/src/assets/wave1.png";
+import aboutImg_3 from "/src/assets/ab2.jpg";
+import aboutImg_4 from "/src/assets/ab3.jpg";
+
 const AboutUs = () => {
   return (
     <>
@@ -8,28 +13,28 @@ const AboutUs = () => {
         <div className="bg-blue-30 w-full h-[400px] p-2 relative">
           <div className="md:w-44 w-40  h-40  absolute bottom-1 md:right-32 right-2 z-10 overflow-hidden ">
             <img
-              src="/src/assets/wave1.png"
+              src={aboutImg_1}
               alt=""
               className="w-full h-full object-cover"
             />
           </div>
           <div className=" md:w-44 w-40  h-40 absolute top-1 md:left-10 -left-3 z-10 overflow-hidden ">
             <img
-              src="/src/assets/wave1.png"
+              src={aboutImg_2}
               alt=""
               className="w-full h-full object-cover"
             />
           </div>
           <div className=" md:w-64 w-60 h-56 absolute top-2 md:right-[6rem] right-2 overflow-hidden">
             <img
-              src="/src/assets/ab2.jpg"
+              src={aboutImg_3}
               alt=""
               className="w-full h-full object-cover"
             />
           </div>
           <div className=" md:w-64 w-52 h-56 absolute bottom-2 left-2 overflow-hidden">
             <img
-              src="/src/assets/ab3.jpg"
+              src={aboutImg_4}
               alt=""
               className="w-full h-full object-cover"
             />
