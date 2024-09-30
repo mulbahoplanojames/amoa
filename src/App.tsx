@@ -1,7 +1,7 @@
 import AboutUs from "./AboutUs";
 import ContactUs from "./components/ContactUs";
 import Hero from "./components/Hero";
-import Portfolio from "./components/Portfolio";
+import Templates from "./components/Templates";
 import Services from "./components/Services";
 import Testimonial from "./components/Testimonial";
 import WhyChooseUs from "./components/WhyChooseUs";
@@ -16,12 +16,12 @@ const App = () => {
         <Hero />
         <AboutUs />
         <Services />
-        <Portfolio />
+        <Templates />
         <WhyChooseUs />
         <Testimonial />
         <ContactUs />
-        <Footer />
       </main>
+      <Footer />
     </div>
   );
 };

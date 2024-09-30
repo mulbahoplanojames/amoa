@@ -1,3 +1,4 @@
+// Importing icons from lucide
 import {
   Globe,
   Palette,
@@ -8,6 +9,8 @@ import {
   MonitorCog,
   ServerCog,
 } from "lucide-react";
+
+// Importing Types from Types
 import {
   NavlinksType,
   ProjectsType,
@@ -15,19 +18,21 @@ import {
   TestimonialType,
 } from "../Types/Types";
 
+// Navlinks Data
 const navLinks: NavlinksType[] = [
   {
     label: "Services",
     path: "/services",
   },
   {
-    label: "Portfolio",
-    path: "/portfolio",
-  },
-  {
-    label: "About",
+    label: "About Us",
     path: "/about",
   },
+  {
+    label: "Templates",
+    path: "/templates",
+  },
+
   {
     label: "Testimonials",
     path: "/testimonials",
@@ -95,7 +100,7 @@ export const servicesData: ServiceDataType[] = [
 
 // Web images
 import web_1 from "/src/assets/web.gif";
-import web_2 from "/src/assets/web2.jpg";
+import web_2 from "/src/assets/booksaw_template.png";
 import web_3 from "/src/assets/web3.jpg";
 // import web_4 from "/src/assets/web4.jpg";
 // import web_5 from "/src/assets/web1.jpg";
