@@ -99,8 +99,8 @@ export const servicesData: ServiceDataType[] = [
 // Projects Data
 
 // Web images
-import web_1 from "/src/assets/web.gif";
-import web_2 from "/src/assets/booksaw_template.png";
+import web_1 from "/src/assets/booksaw_template.png";
+import web_2 from "/src/assets/web.gif";
 import web_3 from "/src/assets/web3.jpg";
 // import web_4 from "/src/assets/web4.jpg";
 // import web_5 from "/src/assets/web1.jpg";
@@ -123,10 +123,10 @@ export const projectsData: ProjectsType[] = [
   {
     title: "E-commerce Platform",
     description:
-      "A fully responsive online store with seamless checkout experience.",
+      "A fully responsive online book store with seamless checkout experience.",
     image: web_1,
     category: "web development",
-    link: "https://example.com/e-commerce",
+    link: "https://booksaw.vercel.app/",
   },
   {
     title: "Corporate Website",

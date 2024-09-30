@@ -77,7 +77,7 @@ const Templates = () => {
                       variant="outline"
                       onClick={() => window.open(project.link)}
                     >
-                      View Project
+                      View Template
                     </Button>
                   </div>
                 </div>
