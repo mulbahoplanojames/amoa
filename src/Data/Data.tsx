@@ -100,8 +100,8 @@ export const servicesData: ServiceDataType[] = [
 
 // Web images
 import web_1 from "/src/assets/booksaw_template.png";
-import web_2 from "/src/assets/web.gif";
-import web_3 from "/src/assets/web3.jpg";
+import web_2 from "/src/assets/wilmaHealth.png";
+import web_3 from "/src/assets/portfolio.png";
 // import web_4 from "/src/assets/web4.jpg";
 // import web_5 from "/src/assets/web1.jpg";
 
@@ -129,18 +129,18 @@ export const projectsData: ProjectsType[] = [
     link: "https://booksaw.vercel.app/",
   },
   {
-    title: "Corporate Website",
-    description: "Modern and professional website for a Fortune 500 company.",
+    title: "Booking System",
+    description: "An online booking system for Doctor health and wellness.",
     image: web_2,
     category: "web development",
-    link: "https://example.com/corporate-website-1",
+    link: "https://wilmahealth.vercel.app/",
   },
   {
     title: "Portfolio Website",
     description: "A personal portfolio to showcase skills and projects.",
     image: web_3,
     category: "web development",
-    link: "https://example.com/portfolio-website",
+    link: "https://oplanojames.vercel.app/",
   },
   // {
   //   title: "Blog Platform",
