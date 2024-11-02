@@ -101,8 +101,8 @@ export const servicesData: ServiceDataType[] = [
 // Web images
 import web_1 from "/src/assets/booksaw_template.png";
 import web_2 from "/src/assets/wilmaHealth.png";
-import web_3 from "/src/assets/portfolio.png";
-// import web_4 from "/src/assets/web4.jpg";
+// import web_3 from "/src/assets/portfolio.png";
+import web_4 from "/src/assets/wlifix.png";
 // import web_5 from "/src/assets/web1.jpg";
 
 // mobile images
@@ -136,11 +136,11 @@ export const projectsData: ProjectsType[] = [
     link: "https://wilmahealth.vercel.app/",
   },
   {
-    title: "Portfolio Website",
-    description: "A personal portfolio to showcase skills and projects.",
-    image: web_3,
+    title: "Movie App",
+    description: "This is a movie app that allows you to search for movies.",
+    image: web_4,
     category: "web development",
-    link: "https://oplanojames.vercel.app/",
+    link: "https://wilfixmovieapp.vercel.app/",
   },
   // {
   //   title: "Blog Platform",

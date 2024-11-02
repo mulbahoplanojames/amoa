@@ -7,7 +7,7 @@ import { useEffect, useState } from "react";
 // import { Link } from "react-router-dom";
 import { Link, Events, animateScroll as scroll, scrollSpy } from "react-scroll";
 
-import logo from "/src/assets/tech.jpg";
+import logo from "/src/assets/techspace.jpg";
 
 const Navbar = () => {
   // State variable to keep track of whether the menu is open or not.
@@ -59,7 +59,7 @@ const Navbar = () => {
           <img
             src={logo}
             alt="TechSpace_Logo"
-            className="md:w-16 md:h-16 w-10 h-10 rounded-md"
+            className="w-10 h-10 rounded-md cursor-pointer "
           />
         </Link>
         {/*//! Menu items for larger devices and mapping through the links */}
@@ -82,7 +82,7 @@ const Navbar = () => {
           ))}
         </ul>
         {/*//! Contact Us button */}
-        <div className="lg:gap-x-6 gap-x-4 flex items-center justify-center">
+        <div className="flex items-center justify-center lg:gap-x-6 gap-x-4">
           <ModeToggle />
           <Link
             to="/contact"
@@ -98,7 +98,7 @@ const Navbar = () => {
             </Button>
           </Link>
           <Menu
-            className="max-lg:block hidden text-3xl cursor-pointer text-black"
+            className="hidden text-3xl text-black cursor-pointer max-lg:block"
             onClick={() => {
               setIsMenuOpen(!isMenuOpen);
             }}
@@ -112,14 +112,14 @@ const Navbar = () => {
           <nav className="lg:bottom-auto bg-[#111728] fixed top-16 bottom-0 left-0 right-0 z-[8888888] ">
             {/* Close button for the menu */}
             <div
-              className="max-lg:block fixed right-0 hidden px-8 py-4 cursor-pointer"
+              className="fixed right-0 hidden px-8 py-4 cursor-pointer max-lg:block"
               onClick={() => {
                 setIsMenuOpen(!isMenuOpen);
               }}
             >
-              <X className=" text-3xl text-white" />
+              <X className="text-3xl text-white " />
             </div>
-            <ul className=" lg:hidden bg-1 gap-y-7 z-40 flex flex-col items-center justify-center h-full">
+            <ul className="z-40 flex flex-col items-center justify-center h-full lg:hidden bg-1 gap-y-7">
               {/* Menu items for smaller devices */}
               {navLinks.map((navlink) => (
                 <li
@@ -140,7 +140,7 @@ const Navbar = () => {
                     onClick={() => {
                       setIsMenuOpen(!isMenuOpen);
                     }}
-                    className="font-montserrat active:text-black text-2xl leading-normal text-white"
+                    className="text-2xl leading-normal text-white font-montserrat active:text-black"
                   >
                     {navlink.label}
                   </Link>
