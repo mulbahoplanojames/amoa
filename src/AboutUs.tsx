@@ -10,47 +10,47 @@ const AboutUs = () => {
   return (
     <>
       <section
-        className="grid md:grid-cols-2 grid-cols-1 md:gap-8 gap-y-4 place-items-center md:px-16 px-2 md:py-20 py-14"
+        className="grid grid-cols-1 px-2 md:grid-cols-2 md:gap-8 gap-y-4 place-items-center md:px-16 md:py-20 py-14"
         id="/about"
       >
         <div className="bg-blue-30 w-full h-[400px] p-2 relative">
-          <div className="md:w-44 w-40  h-40  absolute bottom-1 md:right-32 right-2 z-10 overflow-hidden ">
+          <div className="absolute z-10 w-40 h-40 overflow-hidden md:w-44 bottom-1 md:right-20 right-2">
             <img
               src={aboutImg_1}
               alt=""
-              className="w-full h-full object-cover"
+              className="object-cover w-full h-full"
             />
           </div>
-          <div className=" md:w-44 w-40  h-40 absolute top-1 md:left-10 -left-3 z-10 overflow-hidden ">
+          <div className="absolute z-10 w-40 h-40 overflow-hidden bg-gray-60 md:w-44 top-1 md:left-1 -left-3">
             <img
               src={aboutImg_2}
               alt=""
-              className="w-full h-full object-cover"
+              className="object-cover w-full h-full"
             />
           </div>
           <div className=" md:w-64 w-60 h-56 absolute top-2 md:right-[6rem] right-2 overflow-hidden">
             <img
               src={aboutImg_3}
               alt=""
-              className="w-full h-full object-cover"
+              className="object-cover w-full h-full"
             />
           </div>
-          <div className=" md:w-64 w-52 h-56 absolute bottom-2 left-2 overflow-hidden">
+          <div className="absolute h-56 overflow-hidden md:w-64 w-52 bottom-2 left-2">
             <img
               src={aboutImg_4}
               alt=""
-              className="w-full h-full object-cover"
+              className="object-cover w-full h-full"
             />
           </div>
         </div>
-        <div className=" w-full h-fit py-8 md:px-2 px-1">
-          <h2 className="text-base text-indigo-600 font-semibold tracking-wide uppercase md:pb-4 pb-3">
+        <div className="w-full px-1 py-8 h-fit md:px-2">
+          <h2 className="pb-3 text-base font-semibold tracking-wide text-indigo-600 uppercase md:pb-4">
             About Us
           </h2>
-          <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl capitalize dark:text-slate-200">
+          <p className="mt-2 text-3xl font-extrabold leading-8 tracking-tight text-gray-900 capitalize sm:text-4xl dark:text-slate-200">
             A place of Creative and Inovation for Your Business
           </p>
-          <p className="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto dark:text-slate-300">
+          <p className="max-w-2xl mt-4 text-xl text-gray-500 lg:mx-auto dark:text-slate-300">
             At <span className="text-indigo-600">TechSpace</span>, we are
             dedicated to being a hub of creativity and innovation, specializing
             in designing stunning websites and apps tailored to elevate your
