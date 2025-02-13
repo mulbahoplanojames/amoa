@@ -1,50 +1,16 @@
 import { Button } from "../../components/ui/button";
-import { ModeToggle } from "../../components/mode-toggle";
-import navLinks from "../../Data/Data";
+// import { ModeToggle } from "../../components/mode-toggle";
+// import navLinks from "../../Data/Data";
 import { ArrowUpFromLine, Menu, X } from "lucide-react";
 
-import { useEffect, useState } from "react";
-// import { Link } from "react-router-dom";
-import { Link, Events, animateScroll as scroll, scrollSpy } from "react-scroll";
+import { useState } from "react";
 
-import logo from "/src/assets/techspace.jpg";
+// import logo from "/src/assets/techspace.jpg";
+import Link from "next/link";
+import { navLinks } from "@/data/nav-data";
 
 const Navbar = () => {
-  // State variable to keep track of whether the menu is open or not.
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  useEffect(() => {
-    // Registering the 'begin' event and logging it to the console when triggered.
-    const handleBegin = (to: string, element: HTMLElement) => {
-      console.log("begin", to, element);
-    };
-    Events.scrollEvent.register("begin", handleBegin);
-
-    // Registering the 'end' event and logging it to the console when triggered.
-    const handleEnd = (to: string, element: HTMLElement) => {
-      console.log("end", to, element);
-    };
-    Events.scrollEvent.register("end", handleEnd);
-
-    // Updating scrollSpy when the component mounts.
-    scrollSpy.update();
-
-    // Returning a cleanup function to remove the registered events when the component unmounts.
-    return () => {
-      Events.scrollEvent.remove("begin");
-      Events.scrollEvent.remove("end");
-    };
-  }, []);
-
-  // Defining functions to perform different types of scrolling.
-  const scrollToTop = () => {
-    scroll.scrollToTop();
-  };
-
-  // Function to handle the activation of a link.
-  const handleSetActive = (to: string) => {
-    console.log(to);
-  };
 
   return (
     <>
@@ -53,11 +19,11 @@ const Navbar = () => {
       >
         {/* Link to the home page */}
         <Link
-          to="/"
+          href="/"
           className={`text-2xl font-bold flex justify-center items-center gap-2 `}
         >
           <img
-            src={logo}
+            src={"logo"}
             alt="TechSpace_Logo"
             className="w-10 h-10 rounded-md cursor-pointer "
           />
@@ -67,14 +33,8 @@ const Navbar = () => {
           {navLinks.map((navlink) => (
             <li key={navlink.label} className={`inline-block px-8`}>
               <Link
-                to={navlink.path}
+                href={navlink.path}
                 className={`font-montserrat text-base leading-normal cursor-pointer text-slate-600 hover:text-slate-900`}
-                activeClass="active"
-                spy={true}
-                smooth={true}
-                offset={-70}
-                duration={500}
-                onSetActive={handleSetActive}
               >
                 {navlink.label}
               </Link>
@@ -83,16 +43,8 @@ const Navbar = () => {
         </ul>
         {/*//! Contact Us button */}
         <div className="flex items-center justify-center lg:gap-x-6 gap-x-4">
-          <ModeToggle />
-          <Link
-            to="/contact"
-            activeClass="active"
-            spy={true}
-            smooth={true}
-            offset={-70}
-            duration={500}
-            onSetActive={handleSetActive}
-          >
+          {/* <ModeToggle /> */}
+          <Link href="/contact">
             <Button className="hidden lg:flex bg-[#0f172a] text-white hover:bg-[#111728]">
               Contact Us
             </Button>
@@ -130,13 +82,7 @@ const Navbar = () => {
                   }}
                 >
                   <Link
-                    to={navlink.path}
-                    activeClass="active"
-                    spy={true}
-                    smooth={true}
-                    offset={-70}
-                    duration={500}
-                    onSetActive={handleSetActive}
+                    href={navlink.path}
                     onClick={() => {
                       setIsMenuOpen(!isMenuOpen);
                     }}
@@ -154,9 +100,9 @@ const Navbar = () => {
 
       <button
         className="bg-purple-700 text-white w-14 h-14 rounded-full fixed bottom-[3rem] md:right-12 right-6 z-50 flex justify-center items-center cursor-pointer"
-        onClick={() => {
-          scrollToTop();
-        }}
+        // onClick={() => {
+        //   scrollToTop();
+        // }}
       >
         <ArrowUpFromLine className="text-4xl" />
       </button>

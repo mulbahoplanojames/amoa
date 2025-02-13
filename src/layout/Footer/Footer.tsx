@@ -1,18 +1,16 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
-import { Link } from "react-scroll";
 
 import { Facebook, Instagram, Twitter, Linkedin } from "lucide-react";
 import { Input } from "@/components/ui/input";
-import SolutionsData, {
+import Link from "next/link";
+import {
   CompanyData,
   privacyData,
+  SolutionsData,
   SupportData,
-} from "@/Data/Data_2";
-
-// Function to handle the activation of a link.
-const handleSetActive = (to: string) => {
-  console.log(to);
-};
+} from "@/data/footer-data";
 
 const Footer = () => {
   return (
@@ -30,7 +28,7 @@ const Footer = () => {
                     {SolutionsData.map((item) => (
                       <li key={item}>
                         <Link
-                          to="#"
+                          href="#"
                           className="text-base text-gray-300 hover:text-white"
                         >
                           {item}
@@ -47,7 +45,7 @@ const Footer = () => {
                     {SupportData.map((item) => (
                       <li key={item}>
                         <Link
-                          to="#"
+                          href="#"
                           className="text-base text-gray-300 hover:text-white"
                         >
                           {item}
@@ -66,14 +64,8 @@ const Footer = () => {
                     {CompanyData.map((item) => (
                       <li key={item.label}>
                         <Link
-                          to={item.path}
+                          href={item.path}
                           className="text-base text-gray-300 hover:text-white"
-                          activeClass="active"
-                          spy={true}
-                          smooth={true}
-                          offset={-70}
-                          duration={500}
-                          onSetActive={handleSetActive}
                         >
                           {item.label}
                         </Link>
@@ -89,7 +81,7 @@ const Footer = () => {
                     {privacyData.map((item) => (
                       <li key={item}>
                         <Link
-                          to="#"
+                          href="#"
                           className="text-base text-gray-300 hover:text-white"
                         >
                           {item}
@@ -142,7 +134,7 @@ const Footer = () => {
               ].map((item) => (
                 <Link
                   key={item.name}
-                  to="#"
+                  href="#"
                   className="text-gray-400 hover:text-gray-300"
                 >
                   <span className="sr-only">{item.name}</span>
