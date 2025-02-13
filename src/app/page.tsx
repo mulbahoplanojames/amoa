@@ -1,7 +1,13 @@
+import AboutUs from "@/components/home/AboutUs";
+import HomeHero from "@/components/home/HomeHero";
+
 const page = () => {
   return (
     <>
-      <section></section>
+      <section>
+        <HomeHero />
+        <AboutUs />
+      </section>
     </>
   );
 };
