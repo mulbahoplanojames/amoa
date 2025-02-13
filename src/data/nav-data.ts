@@ -13,7 +13,7 @@ export const navLinks = [
   },
 
   {
-    label: "Testimonials",
-    path: "/testimonials",
+    label: "Blogs",
+    path: "/blogs",
   },
 ];

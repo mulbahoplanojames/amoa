@@ -1,34 +1,35 @@
 "use client";
 
 import { Button } from "../../components/ui/button";
-// import { ModeToggle } from "../../components/mode-toggle";
-// import navLinks from "../../Data/Data";
 import { ArrowUpFromLine, Menu, X } from "lucide-react";
 
 import { useState } from "react";
 
-// import logo from "/src/assets/techspace.jpg";
 import Link from "next/link";
 import { navLinks } from "@/data/nav-data";
+import { ModeToggle } from "@/components/ui/mode-toggle";
+import Image from "next/image";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
 
   return (
     <>
       <nav
         className={` flex justify-between items-center py-4 md:px-10 px-4 fixed z-50 w-full top-0  bg-white shadow-lg`}
       >
-        {/* Link to the home page */}
         <Link
           href="/"
-          className={`text-2xl font-bold flex justify-center items-center gap-2 `}
+          className={`relative w-10 h-10 rounded-md cursor-pointer `}
         >
-          <img
-            src={"logo"}
-            alt="TechSpace_Logo"
-            className="w-10 h-10 rounded-md cursor-pointer "
-          />
+          <Image src="/logo.webp" alt="TechSpace_Logo" className="" fill />
         </Link>
         {/*//! Menu items for larger devices and mapping through the links */}
         <ul className="max-lg:hidden">
@@ -43,9 +44,8 @@ const Navbar = () => {
             </li>
           ))}
         </ul>
-        {/*//! Contact Us button */}
         <div className="flex items-center justify-center lg:gap-x-6 gap-x-4">
-          {/* <ModeToggle /> */}
+          <ModeToggle />
           <Link href="/contact">
             <Button className="hidden lg:flex bg-[#0f172a] text-white hover:bg-[#111728]">
               Contact Us
@@ -102,9 +102,9 @@ const Navbar = () => {
 
       <button
         className="bg-purple-700 text-white w-14 h-14 rounded-full fixed bottom-[3rem] md:right-12 right-6 z-50 flex justify-center items-center cursor-pointer"
-        // onClick={() => {
-        //   scrollToTop();
-        // }}
+        onClick={() => {
+          scrollToTop();
+        }}
       >
         <ArrowUpFromLine className="text-4xl" />
       </button>
