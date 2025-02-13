@@ -1,9 +1,8 @@
-"use client";
-
 import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
 
 import { Facebook, Instagram, Twitter, Linkedin } from "lucide-react";
-import { Input } from "@/components/ui/input";
+
 import Link from "next/link";
 import {
   CompanyData,

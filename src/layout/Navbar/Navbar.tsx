@@ -1,3 +1,5 @@
+"use client";
+
 import { Button } from "../../components/ui/button";
 // import { ModeToggle } from "../../components/mode-toggle";
 // import navLinks from "../../Data/Data";
