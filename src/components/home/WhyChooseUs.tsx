@@ -1,4 +1,4 @@
-import { whyChooseUsData } from "@/Data/Data_2";
+import { whyChooseUsData } from "@/data/whychooseus";
 import {
   Card,
   CardContent,
@@ -28,20 +28,20 @@ const WhyChooseUs = () => {
         </div>
 
         <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-6 gap-y-6 md:px-14 px-2 mt-12 place-items-center">
-          {whyChooseUsData.map((service) => (
+          {whyChooseUsData.map((item) => (
             <Card
-              key={service.title}
+              key={item.title}
               className="dark:bg-white hover:scale-105 transition-all duration-300"
             >
               <CardHeader>
-                <service.icon className="h-10  w-12 text-indigo-600 mb-4" />
+                <item.icon className="h-10  w-12 text-indigo-600 mb-4" />
                 <CardTitle className="text-gray-900 text-xl ">
-                  {service.title}
+                  {item.title}
                 </CardTitle>
               </CardHeader>
               <CardContent>
                 <CardDescription className="text-gray-500 md:text-base text-lg">
-                  {service.description}
+                  {item.description}
                 </CardDescription>
               </CardContent>
             </Card>
