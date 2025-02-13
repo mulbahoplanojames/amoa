@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Button } from "../ui/button";
+import Image from "next/image";
 
 const HomeHero = () => {
   return (
@@ -38,11 +39,14 @@ const HomeHero = () => {
           </div>
         </div>
         <div className="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
-          <img
-            className="object-cover w-full h-56 sm:h-72 md:h-96 lg:w-full lg:h-full"
-            src={"/assets/tech1.jpg"}
-            alt="techSpace HomeHero image"
-          />
+          <div className="h-56 sm:h-72 md:h-96 lg:w-full lg:h-full relative">
+            <Image
+              className="object-cover w-full h-full"
+              src={"/assets/tech1.jpg"}
+              alt="techSpace HomeHero image"
+              fill
+            />
+          </div>
         </div>
       </section>
     </>
