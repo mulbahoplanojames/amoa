@@ -41,7 +41,7 @@ const HomeHero = () => {
         <div className="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
           <div className="h-56 sm:h-72 md:h-96 lg:w-full lg:h-full relative">
             <Image
-              className="object-cover w-full h-full"
+              className="object-cover w-full h-full "
               src={"/assets/tech1.jpg"}
               alt="techSpace HomeHero image"
               fill
