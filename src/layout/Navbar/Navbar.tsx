@@ -47,7 +47,7 @@ const Navbar = () => {
         <div className="flex items-center justify-center lg:gap-x-6 gap-x-4">
           <ModeToggle />
           <Link href="/contact">
-            <Button className="hidden lg:flex bg-[#0f172a] text-white hover:bg-[#111728]">
+            <Button className="hidden lg:flex bg-purple-700 text-white hover:bg-purple-900">
               Contact Us
             </Button>
           </Link>
