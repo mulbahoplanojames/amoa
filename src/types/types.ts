@@ -10,3 +10,9 @@ export interface TestimonialType {
   role: string;
   image: string;
 }
+
+export interface FaqListType {
+  isActive: boolean;
+  question: string;
+  answer: string;
+}
