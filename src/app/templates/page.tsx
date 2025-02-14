@@ -1,7 +1,12 @@
+import Templates from "@/components/templates/Templates";
 import React from "react";
 
 const TemplatesPage = () => {
-  return <div>TemplatesPage</div>;
+  return (
+    <>
+      <Templates />
+    </>
+  );
 };
 
 export default TemplatesPage;

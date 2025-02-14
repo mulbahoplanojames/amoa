@@ -1,44 +1,26 @@
-// Web images
-import web_1 from "/src/assets/booksaw_template.png";
-import web_2 from "/src/assets/wilmaHealth.png";
-// import web_3 from "/src/assets/portfolio.png";
-import web_4 from "/src/assets/wlifix.png";
-// import web_5 from "/src/assets/web1.jpg";
+import { TamplatesType } from "@/types/types";
 
-// mobile images
-import mobile_1 from "/src/assets/mobile1.jpg";
-import mobile_2 from "/src/assets/mobile2.jpg";
-import mobile_3 from "/src/assets/mobile3.jpg";
-// import mobile_4 from "/src/assets/mobile4.jpg";
-// import mobile_5 from "/src/assets/mobile5.jpg";
-
-// UI/UX Design images
-import ux_1 from "/src/assets/tech.jpg";
-import ux_2 from "/src/assets/tech1.jpg";
-import ux_3 from "/src/assets/logo.jpg";
-// import ux_4 from "/src/assets/logo.jpg";
-
-export const projectsData: TamplatesType[] = [
+export const templateData: TamplatesType[] = [
   // Web Development
   {
     title: "E-commerce Platform",
     description:
       "A fully responsive online book store with seamless checkout experience.",
-    image: web_1,
+    image: "/assets/booksaw_template.png",
     category: "web development",
     link: "https://booksaw.vercel.app/",
   },
   {
     title: "Booking System",
     description: "An online booking system for Doctor health and wellness.",
-    image: web_2,
+    image: "/assets/wilmaHealth.png",
     category: "web development",
     link: "https://wilmahealth.vercel.app/",
   },
   {
     title: "Movie App",
     description: "This is a movie app that allows you to search for movies.",
-    image: web_4,
+    image: "/assets/wlifix.png",
     category: "web development",
     link: "https://wilfixmovieapp.vercel.app/",
   },
@@ -62,21 +44,21 @@ export const projectsData: TamplatesType[] = [
   {
     title: "Fitness Tracker App",
     description: "Mobile application for tracking workouts and nutrition.",
-    image: mobile_1,
+    image: "/assets/mobile1.jpg",
     category: "mobile development",
     link: "https://example.com/fitness-app",
   },
   {
     title: "Recipe Finder App",
     description: "An application to discover and save recipes.",
-    image: mobile_2,
+    image: "/assets/mobile2.jpg",
     category: "mobile development",
     link: "https://example.com/recipe-app",
   },
   {
     title: "Travel Planner App",
     description: "An app to help users plan their travel itineraries.",
-    image: mobile_3,
+    image: "/assets/mobile3.jpg",
     category: "mobile development",
     link: "https://example.com/travel-planner",
   },
@@ -100,7 +82,7 @@ export const projectsData: TamplatesType[] = [
     title: "E-commerce App Redesign",
     description:
       "UI/UX redesign of a popular e-commerce app to enhance user experience.",
-    image: ux_1,
+    image: "//assets/tech.jpg",
     category: "ui/ux design",
     link: "https://example.com/ecommerce-redesign",
   },
@@ -108,7 +90,7 @@ export const projectsData: TamplatesType[] = [
     title: "Social Media Dashboard",
     description:
       "Design of a dashboard for managing social media accounts effectively.",
-    image: ux_2,
+    image: "/assets/tech1.jpg",
     category: "ui/ux design",
     link: "https://example.com/social-media-dashboard",
   },
@@ -116,7 +98,7 @@ export const projectsData: TamplatesType[] = [
     title: "Corporate Branding Project",
     description:
       "UI/UX design for a corporate branding project, including logo and website.",
-    image: ux_3,
+    image: "/assets/logo.jpg",
     category: "ui/ux design",
     link: "https://example.com/corporate-branding",
   },
