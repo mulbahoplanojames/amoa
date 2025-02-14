@@ -16,3 +16,11 @@ export interface FaqListType {
   question: string;
   answer: string;
 }
+
+export interface TamplatesType {
+  title: string;
+  description: string;
+  image: string;
+  category?: string;
+  link?: string;
+}
