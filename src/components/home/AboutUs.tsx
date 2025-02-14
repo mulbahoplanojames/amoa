@@ -5,10 +5,7 @@ import Image from "next/image";
 const AboutUs = () => {
   return (
     <>
-      <section
-        className="grid grid-cols-1 px-2 md:grid-cols-2 md:gap-8 gap-y-4 place-items-center md:px-16 md:py-28 py-14"
-        id="/about"
-      >
+      <section className="grid grid-cols-1 px-2 md:grid-cols-2 md:gap-8 gap-y-4 place-items-center md:px-16 md:py-28 py-14">
         <div className="bg-blue-30 w-full h-[400px] p-2 relative">
           <div className="absolute z-10 w-40 h-40 overflow-hidden md:w-44 bottom-1 md:right-20 right-2">
             <div className="w-full h-full relative">

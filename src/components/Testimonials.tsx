@@ -1,4 +1,5 @@
-import { testimonialsData } from "../Data/Data";
+import { testimonialsData } from "@/data/testimonials";
+import { Card, CardContent } from "./ui/card";
 
 import {
   Carousel,
@@ -6,12 +7,12 @@ import {
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from "@/components/ui/carousel";
-import { Card, CardContent } from "./ui/card";
+} from "./ui/carousel";
+import Image from "next/image";
 
 const Testimonial = () => {
   return (
-    <section className="md:py-20 py-12 bg-gray-50" id="/testimonials">
+    <section className="md:py-20 py-12 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           <h2 className="text-base text-indigo-600 font-semibold tracking-wide uppercase">
@@ -40,7 +41,7 @@ const Testimonial = () => {
                       </div>
                       <div className="mt-6 flex items-center">
                         <div className="flex-shrink-0">
-                          <img
+                          <Image
                             className="h-10 w-10 rounded-full"
                             src={testimonial.image}
                             alt={testimonial.author}

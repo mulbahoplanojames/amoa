@@ -3,3 +3,10 @@ export interface ServiceDataType {
   description: string;
   icon: React.ElementType;
 }
+
+export interface TestimonialType {
+  content: string;
+  author: string;
+  role: string;
+  image: string;
+}
