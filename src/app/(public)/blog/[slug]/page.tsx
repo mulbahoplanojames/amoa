@@ -38,8 +38,8 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   }
 
   return (
-    <div className="container mx-auto px-4 py-12">
-      <article className="max-w-3xl mx-auto">
+    <div className="container mx-auto px-2 pb-12 md:pt-32 pt-24">
+      <article className="max-w-3xl mx-auto ">
         <div className="mb-8">
           <h1 className="text-4xl font-bold mb-6">{post.title}</h1>
           <div className="flex flex-wrap items-center gap-4 text-muted-foreground mb-6">

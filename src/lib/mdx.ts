@@ -107,63 +107,6 @@ function calculateReadingTime(content: string): string {
 function getMockPosts(): Post[] {
   return [
     //     {
-    //       title: "The Future of AI in Software Development",
-    //       slug: "future-of-ai-in-software-development",
-    //       date: "2024-03-10",
-    //       excerpt:
-    //         "Exploring how AI is transforming the way developers build software and what this means for the future of the industry.",
-    //       readingTime: "8 min read",
-    //       image: "/placeholder.svg?height=600&width=800",
-    //       author: {
-    //         name: "Alex Johnson",
-    //         avatar: "/placeholder.svg?height=100&width=100",
-    //       },
-    //       content: `
-    // # The Future of AI in Software Development
-    // Artificial intelligence is rapidly transforming the software development landscape. From code generation to automated testing, AI tools are becoming an essential part of the modern developer's toolkit.
-    // ## How AI is Changing Development Workflows
-    // The integration of AI into development workflows has already begun to show significant benefits:
-    // - **Code Completion and Generation**: Tools like GitHub Copilot can suggest entire functions based on comments or context
-    // - **Automated Testing**: AI can generate test cases and identify potential edge cases
-    // - **Bug Detection**: Machine learning models can identify patterns that lead to bugs before they make it to production
-    // ## The Impact on Developer Productivity
-    // Studies have shown that developers using AI-assisted tools can see productivity increases of up to 40%. This isn't about replacing developers but rather enhancing their capabilities and allowing them to focus on more complex problems.
-    // ## Looking Ahead: The Next Five Years
-    // In the coming years, we expect to see:
-    // 1. More sophisticated code generation capabilities
-    // 2. AI-driven architecture recommendations
-    // 3. Automated refactoring of legacy codebases
-    // 4. Real-time collaboration between AI and human developers
-    // The future of software development will be a partnership between human creativity and AI capabilities, leading to faster development cycles and more robust software.
-    //       `,
-    //     },
-    //     {
-    //       title: "Building Scalable Microservices with Node.js",
-    //       slug: "building-scalable-microservices",
-    //       date: "2024-03-05",
-    //       excerpt:
-    //         "Learn the best practices for designing and implementing scalable microservice architectures using Node.js.",
-    //       readingTime: "6 min read",
-    //       image: "/placeholder.svg?height=600&width=800",
-    //       author: {
-    //         name: "Sarah Chen",
-    //         avatar: "/placeholder.svg?height=100&width=100",
-    //       },
-    //     },
-    //     {
-    //       title: "The Ultimate Guide to Next.js 15",
-    //       slug: "ultimate-guide-nextjs-15",
-    //       date: "2024-02-28",
-    //       excerpt:
-    //         "Everything you need to know about the latest features and improvements in Next.js 15.",
-    //       readingTime: "7 min read",
-    //       image: "/placeholder.svg?height=600&width=800",
-    //       author: {
-    //         name: "Miguel Rodriguez",
-    //         avatar: "/placeholder.svg?height=100&width=100",
-    //       },
-    //     },
-    //     {
     //       title: "Optimizing React Performance",
     //       slug: "optimizing-react-performance",
     //       date: "2024-02-20",
@@ -175,6 +118,6 @@ function getMockPosts(): Post[] {
     //         name: "Emily Parker",
     //         avatar: "/placeholder.svg?height=100&width=100",
     //       },
-    //     },
+    //
   ];
 }
