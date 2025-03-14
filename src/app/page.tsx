@@ -14,8 +14,8 @@ const page = () => {
       <Services />
       <WhyChooseUs />
       <Testimonials />
-      <NewsLetter />
       <FAQ />
+      <NewsLetter />
     </>
   );
 };

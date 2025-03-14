@@ -1,7 +1,9 @@
 "use client";
+import { team } from "@/data/team";
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 import { useRef } from "react";
 
 // Animation variants
@@ -28,40 +30,13 @@ export default function TeamSection() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.2 });
 
-  const team = [
-    {
-      name: "Alex Morgan",
-      role: "Founder & CEO",
-      bio: "Former professional athlete with a passion for innovation and quality sportswear.",
-      image: "/placeholder.svg?height=400&width=400&text=CEO",
-    },
-    {
-      name: "Sarah Chen",
-      role: "Head of Design",
-      bio: "Award-winning designer with over 15 years of experience in sportswear design.",
-      image: "/placeholder.svg?height=400&width=400&text=Designer",
-    },
-    {
-      name: "James Wilson",
-      role: "Product Director",
-      bio: "Sports scientist turned product expert, focused on performance and comfort.",
-      image: "/placeholder.svg?height=400&width=400&text=Product",
-    },
-    {
-      name: "Maria Rodriguez",
-      role: "Marketing Lead",
-      bio: "Digital marketing specialist with a background in sports journalism.",
-      image: "/placeholder.svg?height=400&width=400&text=Marketing",
-    },
-  ];
-
   return (
     <section className="py-20 bg-white">
       <div className="container mx-auto px-4">
-        <div className="max-w-3xl mx-auto text-center mb-16">
+        <div className="max-w-3xl mx-auto text-center mb-12">
           <h2 className="text-3xl font-bold mb-4">Meet Our Team</h2>
           <p className="text-lg text-gray-600">
-            The passionate people behind Newcasa Global
+            The passionate people behind AMOA
           </p>
         </div>
 
@@ -90,6 +65,19 @@ export default function TeamSection() {
               </div>
               <h3 className="text-xl font-bold">{member.name}</h3>
               <p className="text-blue-600">{member.role}</p>
+              <div className="flex space-x-4 mt-2">
+                {member?.socials?.map((social, socialIndex) => (
+                  <Link
+                    key={socialIndex}
+                    href={social.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-purple-800"
+                  >
+                    {social.icon}
+                  </Link>
+                ))}
+              </div>
             </motion.div>
           ))}
         </motion.div>

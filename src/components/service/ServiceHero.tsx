@@ -10,7 +10,8 @@ const ServiceHero = () => {
         </h1>
         <p className="mt-6 mb-8 text-base md:text-lg sm:mb-6 xl:max-w-3xl dark:text-gray-50">
           From custom websites to powerful applications, AMOA Tech delivers
-          cutting-edge solutions tailored to your business needs.
+          cutting-edge solutions tailored to your business needs and
+          professional courses to enhance your skills.
         </p>
         <div className="flex justify-center md:gap-0 gap-x-4">
           <Link

@@ -1,70 +1,41 @@
 "use client";
 
-import { newsLetterSchema } from "@/Schema/zod-schema";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { useForm } from "react-hook-form";
-import { z } from "zod";
-import { Button } from "@/components/ui/button";
-import {
-  Form,
-  FormControl,
-  FormField,
-  FormItem,
-  FormMessage,
-} from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
-
 const NewsLetter = () => {
-  const form = useForm<z.infer<typeof newsLetterSchema>>({
-    resolver: zodResolver(newsLetterSchema),
-    defaultValues: {
-      email: "",
-    },
-  });
-
-  const onSubmit = (values: z.infer<typeof newsLetterSchema>) => {
-    console.log(values);
-  };
-
   return (
     <>
-      <section className="py-6 md:py-16  dark:text-white">
-        <div className="container mx-auto grid md:grid-cols-2 grid-cols-1 p-4 space-y-8 md:p-10 lg:space-y-0 lg:space-x-12  place-items-center">
-          <div className="flex flex-col space-y-4 text-center lg:text-left">
-            <h1 className="text-5xl font-bold leading-none">
-              Get Latest Updates From Us
-            </h1>
-            <p className="text-lg">
-              Subscribe to our newsletter and stay up-to-date with our latest
-              news and updates.
-            </p>
-          </div>
-          <Form {...form}>
-            <form
-              onSubmit={form.handleSubmit(onSubmit)}
-              className="space-y-4 w-full"
-            >
-              <FormField
-                control={form.control}
-                name="email"
-                render={({ field }) => (
-                  <FormItem className="w-full">
-                    <FormControl>
-                      <Input
-                        placeholder="Enter your email"
-                        {...field}
-                        className="py-5"
+      <section className="py-14 md:py-16 bg-primary_clr">
+        <div className="container px-4">
+          <div className="grid grid-cols-12 lg:grid-cols-7 place-items-center text-center text-white">
+            <div className="col-span-12">
+              <h2 className="text-2xl md:text-[45px] leading-none font-bold mb-6">
+                Join with us for more information
+              </h2>
+
+              <div className="grid grid-cols-12 place-items-center">
+                <div className="col-span-12 sm:col-span-6 sm:col-start-4 sm:px-3 md:px-12 lg:px-24">
+                  <p className="text-lg leading-6 mb-12">
+                    Subscribe to our newsletter to get the latest news and
+                    updates.
+                  </p>
+                  <form>
+                    <div className="relative flex flex-wrap items-center justify-between p-2 bg-white rounded w-full">
+                      <input
+                        type="email"
+                        className="min-h-12 leading-10 px-4 w-full"
+                        required
+                        placeholder="Enter Email"
                       />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-              <Button type="submit" className="w-full">
-                Submit
-              </Button>
-            </form>
-          </Form>
+                      <div className="absolute right-1">
+                        <button className="bg-primary_clr hover:bg-opacity-90 text-white border border-primary_clr/80 py-3 px-7 rounded transition font-normal">
+                          Subscribe
+                        </button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </>
