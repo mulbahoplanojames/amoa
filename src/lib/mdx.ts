@@ -154,7 +154,8 @@ function getMockPosts(): Post[] {
     //       title: "The Ultimate Guide to Next.js 15",
     //       slug: "ultimate-guide-nextjs-15",
     //       date: "2024-02-28",
-    //       excerpt: "Everything you need to know about the latest features and improvements in Next.js 15.",
+    //       excerpt:
+    //         "Everything you need to know about the latest features and improvements in Next.js 15.",
     //       readingTime: "7 min read",
     //       image: "/placeholder.svg?height=600&width=800",
     //       author: {

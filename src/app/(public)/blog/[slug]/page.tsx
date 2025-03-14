@@ -12,7 +12,10 @@ interface BlogPostPageProps {
 }
 
 export async function generateMetadata({ params }: BlogPostPageProps) {
-  const post = await getPostBySlug(params.slug);
+  const { slug } = await params;
+  const post = await getPostBySlug(slug);
+  console.log("Post", post);
+  console.log("Params", slug);
 
   if (!post) {
     return {

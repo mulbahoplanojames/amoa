@@ -1,17 +1,29 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import { zodResolver } from "@hookform/resolvers/zod"
-import { useForm } from "react-hook-form"
-import { z } from "zod"
-import { Button } from "@/components/ui/button"
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form"
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
-import { toast } from "@/hooks/use-toast"
-import { Mail, Phone, MapPin, ArrowRight, Check } from "lucide-react"
-import { Card, CardContent } from "@/components/ui/card"
+import { useState } from "react";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { useForm } from "react-hook-form";
+import { z } from "zod";
+import { Button } from "@/components/ui/button";
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from "@/components/ui/form";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Mail, Phone, MapPin, ArrowRight, Check } from "lucide-react";
+import { Card, CardContent } from "@/components/ui/card";
 
 const formSchema = z.object({
   name: z.string().min(2, {
@@ -29,11 +41,11 @@ const formSchema = z.object({
   message: z.string().min(10, {
     message: "Message must be at least 10 characters.",
   }),
-})
+});
 
 export default function ContactPage() {
-  const [isSubmitting, setIsSubmitting] = useState(false)
-  const [isSuccess, setIsSuccess] = useState(false)
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSuccess, setIsSuccess] = useState(false);
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -43,21 +55,18 @@ export default function ContactPage() {
       subject: "",
       message: "",
     },
-  })
+  });
 
   function onSubmit(values: z.infer<typeof formSchema>) {
-    setIsSubmitting(true)
+    setIsSubmitting(true);
 
     // Simulate API call
     setTimeout(() => {
-      setIsSubmitting(false)
-      setIsSuccess(true)
-      toast({
-        title: "Message sent successfully!",
-        description: "We'll get back to you as soon as possible.",
-      })
-      console.log(values)
-    }, 1500)
+      setIsSubmitting(false);
+      setIsSuccess(true);
+      console.log("Form submitted:", values);
+      console.log(values);
+    }, 1500);
   }
 
   const contactInfo = [
@@ -79,7 +88,7 @@ export default function ContactPage() {
       value: "123 Tech Street, Silicon Valley, CA 94043",
       link: "https://maps.google.com",
     },
-  ]
+  ];
 
   return (
     <div className="container mx-auto px-4 py-12">
@@ -92,7 +101,10 @@ export default function ContactPage() {
 
       <div className="grid lg:grid-cols-3 gap-10 mb-16">
         {contactInfo.map((item, index) => (
-          <Card key={index} className="border-none shadow-md hover:shadow-lg transition-shadow">
+          <Card
+            key={index}
+            className="border-none shadow-md hover:shadow-lg transition-shadow"
+          >
             <CardContent className="flex flex-col items-center text-center p-6">
               <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center text-primary mb-4">
                 {item.icon}
@@ -102,7 +114,9 @@ export default function ContactPage() {
                 href={item.link}
                 className="text-muted-foreground hover:text-primary transition-colors"
                 target={item.title === "Address" ? "_blank" : undefined}
-                rel={item.title === "Address" ? "noopener noreferrer" : undefined}
+                rel={
+                  item.title === "Address" ? "noopener noreferrer" : undefined
+                }
               >
                 {item.value}
               </a>
@@ -114,10 +128,12 @@ export default function ContactPage() {
       <div className="max-w-4xl mx-auto rounded-xl overflow-hidden shadow-xl">
         <div className="grid md:grid-cols-5">
           <div className="p-8 bg-primary text-primary-foreground md:col-span-2">
-            <h2 className="text-2xl font-bold mb-4">Let's Start a Conversation</h2>
+            <h2 className="text-2xl font-bold mb-4">
+              Let&apos;s Start a Conversation
+            </h2>
             <p className="text-primary-foreground/80 mb-6">
-              Have a project in mind or just want to say hello? Fill out the form and we'll get back to you as soon as
-              possible.
+              Have a project in mind or just want to say hello? Fill out the
+              form and we&apos;ll get back to you as soon as possible.
             </p>
             <div className="space-y-4">
               <div className="flex items-center gap-3">
@@ -141,12 +157,20 @@ export default function ContactPage() {
                   <Check className="h-8 w-8 text-green-600 dark:text-green-300" />
                 </div>
                 <h3 className="text-2xl font-bold mb-2">Message Sent!</h3>
-                <p className="text-muted-foreground mb-6">Thank you for reaching out. We'll get back to you shortly.</p>
-                <Button onClick={() => setIsSuccess(false)}>Send Another Message</Button>
+                <p className="text-muted-foreground mb-6">
+                  Thank you for reaching out. We&apos;ll get back to you
+                  shortly.
+                </p>
+                <Button onClick={() => setIsSuccess(false)}>
+                  Send Another Message
+                </Button>
               </div>
             ) : (
               <Form {...form}>
-                <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+                <form
+                  onSubmit={form.handleSubmit(onSubmit)}
+                  className="space-y-6"
+                >
                   <div className="grid md:grid-cols-2 gap-6">
                     <FormField
                       control={form.control}
@@ -168,7 +192,10 @@ export default function ContactPage() {
                         <FormItem>
                           <FormLabel>Email</FormLabel>
                           <FormControl>
-                            <Input placeholder="your.email@example.com" {...field} />
+                            <Input
+                              placeholder="your.email@example.com"
+                              {...field}
+                            />
                           </FormControl>
                           <FormMessage />
                         </FormItem>
@@ -183,7 +210,10 @@ export default function ContactPage() {
                         <FormItem>
                           <FormLabel>Subject</FormLabel>
                           <FormControl>
-                            <Input placeholder="What is this regarding?" {...field} />
+                            <Input
+                              placeholder="What is this regarding?"
+                              {...field}
+                            />
                           </FormControl>
                           <FormMessage />
                         </FormItem>
@@ -195,7 +225,10 @@ export default function ContactPage() {
                       render={({ field }) => (
                         <FormItem>
                           <FormLabel>Department</FormLabel>
-                          <Select onValueChange={field.onChange} defaultValue={field.value}>
+                          <Select
+                            onValueChange={field.onChange}
+                            defaultValue={field.value}
+                          >
                             <FormControl>
                               <SelectTrigger>
                                 <SelectValue placeholder="Select a department" />
@@ -204,7 +237,9 @@ export default function ContactPage() {
                             <SelectContent>
                               <SelectItem value="sales">Sales</SelectItem>
                               <SelectItem value="support">Support</SelectItem>
-                              <SelectItem value="business">Business Development</SelectItem>
+                              <SelectItem value="business">
+                                Business Development
+                              </SelectItem>
                               <SelectItem value="other">Other</SelectItem>
                             </SelectContent>
                           </Select>
@@ -230,7 +265,11 @@ export default function ContactPage() {
                       </FormItem>
                     )}
                   />
-                  <Button type="submit" className="w-full" disabled={isSubmitting}>
+                  <Button
+                    type="submit"
+                    className="w-full"
+                    disabled={isSubmitting}
+                  >
                     {isSubmitting ? (
                       <span className="flex items-center">
                         <svg
@@ -281,6 +320,5 @@ export default function ContactPage() {
         </div>
       </div>
     </div>
-  )
+  );
 }
-
