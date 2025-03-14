@@ -9,9 +9,11 @@ import Link from "next/link";
 import { navLinks } from "@/data/nav-data";
 import { ModeToggle } from "@/components/ui/mode-toggle";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const pathname = usePathname();
 
   const scrollToTop = () => {
     window.scrollTo({
@@ -33,21 +35,28 @@ const Navbar = () => {
         </Link>
         {/*//! Menu items for larger devices and mapping through the links */}
         <ul className="max-lg:hidden">
-          {navLinks.map((navlink) => (
-            <li key={navlink.label} className={`inline-block px-8`}>
-              <Link
-                href={navlink.path}
-                className={`font-montserrat text-base leading-normal cursor-pointer text-slate-600 hover:text-slate-900`}
-              >
-                {navlink.label}
-              </Link>
-            </li>
-          ))}
+          {navLinks.map((navlink) => {
+            const isActive = pathname === navlink.path;
+            return (
+              <li key={navlink.label} className={`inline-block px-8 `}>
+                <Link
+                  href={navlink.path}
+                  className={`${
+                    isActive
+                      ? "border-b-2 border-primary_clr text-primary_clr font-bold"
+                      : "font-montserrat text-base leading-normal cursor-pointer text-slate-600 hover:text-slate-900 "
+                  }`}
+                >
+                  {navlink.label}
+                </Link>
+              </li>
+            );
+          })}
         </ul>
         <div className="flex items-center justify-center lg:gap-x-6 gap-x-4">
           <ModeToggle />
           <Link href="/contact">
-            <Button className="hidden lg:flex bg-purple-700 text-white hover:bg-purple-900">
+            <Button className="hidden lg:flex bg-primary_clr text-white hover:bg-primary_clr/80 cursor-pointer ">
               Contact Us
             </Button>
           </Link>

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Button } from "../ui/button";
 import Image from "next/image";
+// import { GradientAnimatedText } from "../GradientAnimatedText";
 
 const AboutUs = () => {
   return (
@@ -52,22 +53,27 @@ const AboutUs = () => {
           <h2 className="pb-3 text-base font-semibold tracking-wide text-indigo-600 uppercase md:pb-4">
             About Us
           </h2>
-          <p className="mt-2 text-3xl font-extrabold leading-8 tracking-tight text-gray-900 capitalize sm:text-4xl dark:text-slate-200">
+          {/* <GradientAnimatedText label="About Us" /> */}
+          <p className="mt-2 text-3xl font-extrabold leading-10 tracking-tight text-gray-900 capitalize sm:text-4xl dark:text-slate-200">
             A place of Creative and Inovation for Your Business
           </p>
           <p className="max-w-2xl mt-4 text-xl text-gray-500 lg:mx-auto dark:text-slate-300">
-            At <span className="text-indigo-600">TechSpace</span>, we are
-            dedicated to being a hub of creativity and innovation, specializing
-            in designing stunning websites and apps tailored to elevate your
-            business. Our expert team works closely with you to transform your
-            vision into a dynamic online presence that captivates your audience
+            At <span className="text-indigo-600">AMOA</span>, we are dedicated
+            to being a hub of creativity and innovation, specializing in
+            designing stunning websites and apps tailored to elevate your
+            business, and offering professional courses. Our expert team works
+            closely with you to transform your vision into a dynamic online
+            presence that captivates your audience
           </p>
           <div className="mt-8">
-            <Button variant="outline" size={"lg"}>
+            <Button variant="outline" size={"lg"} className="cursor-pointer">
               Our Team
             </Button>
             <Link href="/contact">
-              <Button size={"lg"} className="ml-4 ">
+              <Button
+                size={"lg"}
+                className="ml-4 bg-primary_clr hover:bg-primary_clr/80 cursor-pointer"
+              >
                 Get In Touch
               </Button>
             </Link>

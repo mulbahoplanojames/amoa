@@ -1,26 +1,146 @@
-import { faqList } from "@/data/faq-list";
-import FaqItem from "./FAQItem";
-import { FaqListType } from "@/types/types";
+"use client";
 
-const FAQ = () => {
+import { useState } from "react";
+
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { ChevronRight, Search } from "lucide-react";
+import FAQItem from "./FAQItem";
+import { faqItems } from "@/data/faq-list";
+
+export default function FAQSection() {
+  const [searchQuery, setSearchQuery] = useState("");
+  const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
+
+  // Filter FAQ items based on search query
+  const filteredFAQs = faqItems.filter(
+    (item) =>
+      item.question.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      item.answer.toLowerCase().includes(searchQuery.toLowerCase())
+  );
+
+  // Get unique categories
+  const categories = Array.from(new Set(faqItems.map((item) => item.category)));
+
+  // Toggle FAQ item expansion
+  const toggleExpand = (index: number) => {
+    setExpandedIndex(expandedIndex === index ? null : index);
+  };
+
   return (
-    <section className="text-zinc-900 dark:text-white pb-12">
-      <h2 className="md:text-4xl text-center text-3xl pb-4 font-semibold">
-        Frequently Asked Questions
-      </h2>
-      <div className="container px-3  mx-auto">
-        <div className="bg-white  dark:bg-[#1E2735] p-6 ">
-          {faqList.map((faq: FaqListType) => (
-            <FaqItem faq={faq} key={faq.question} />
-          ))}
+    <section className="py-16 px-4 bg-gradient-to-b from-white to-blue-50">
+      <div className="max-w-4xl mx-auto">
+        <div className="text-center mb-12 relative">
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-blue-100 rounded-full opacity-50 blur-xl" />
 
-          <button className="bg-transparent hover:bg-purple-700 border border-purple-700 hover:text-white rounded transition py-3 px-9 my-6">
-            Have a Question?
-          </button>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 relative">
+            Frequently Asked Questions
+          </h2>
+
+          <p className="text-gray-600 max-w-2xl mx-auto relative">
+            Find answers to the most common questions about our products,
+            shipping, returns, and more.
+          </p>
+        </div>
+
+        {/* Search bar */}
+        <div className="relative mb-10 max-w-xl mx-auto">
+          <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+            <Search className="h-5 w-5 text-gray-400" />
+          </div>
+          <input
+            type="text"
+            className="block w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg bg-white shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+            placeholder="Search for questions or keywords.."
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+          />
+        </div>
+
+        {/* FAQ Categories and Items */}
+        {searchQuery ? (
+          <div className="space-y-4">
+            <h3 className="text-xl font-medium mb-4">Search Results</h3>
+            {filteredFAQs.length === 0 ? (
+              <p className="text-center py-8 text-gray-500">
+                No results found. Please try a different search term.
+              </p>
+            ) : (
+              filteredFAQs.map((faq, index) => (
+                <FAQItem
+                  key={index}
+                  faq={faq}
+                  isExpanded={expandedIndex === index}
+                  onToggle={() => toggleExpand(index)}
+                  highlightText={searchQuery}
+                />
+              ))
+            )}
+          </div>
+        ) : (
+          <Tabs defaultValue={categories[0]} className="w-full">
+            <TabsList className="grid grid-cols-5 md:grid-cols-6 mb-3 bg-blue-50 p-1 rounded-lg">
+              {categories.map((category) => (
+                <TabsTrigger
+                  key={category}
+                  value={category}
+                  className="data-[state=active]:bg-white data-[state=active]:shadow-sm"
+                >
+                  {category}
+                </TabsTrigger>
+              ))}
+            </TabsList>
+
+            {categories.map((category) => (
+              <TabsContent
+                key={category}
+                value={category}
+                className="space-y-4 mt-2"
+              >
+                {faqItems
+                  .filter((item) => item.category === category)
+                  .map((faq, index) => (
+                    <FAQItem
+                      key={index}
+                      faq={faq}
+                      isExpanded={
+                        expandedIndex ===
+                        faqItems.findIndex((f) => f.question === faq.question)
+                      }
+                      onToggle={() =>
+                        toggleExpand(
+                          faqItems.findIndex((f) => f.question === faq.question)
+                        )
+                      }
+                    />
+                  ))}
+              </TabsContent>
+            ))}
+          </Tabs>
+        )}
+
+        {/* Contact section */}
+        <div className="mt-8 p-6 bg-blue-600 text-white rounded-xl shadow-lg relative overflow-hidden">
+          <div className="absolute top-0 right-0 w-64 h-64 bg-blue-500 rounded-full -mr-32 -mt-32 opacity-50" />
+          <div className="absolute bottom-0 left-0 w-40 h-40 bg-blue-700 rounded-full -ml-20 -mb-20 opacity-50" />
+
+          <div className="relative">
+            <h3 className="text-xl font-bold mb-2">Still Have Questions?</h3>
+            <p className="mb-4 text-blue-100">
+              Our customer support team is here to help you with any questions
+              you may have.
+            </p>
+            <a
+              href="#contact"
+              className="inline-flex items-center bg-white text-blue-600 px-4 py-2 rounded-lg font-medium hover:bg-blue-50 transition-colors"
+            >
+              Get in touch
+              <ChevronRight className="ml-1 h-4 w-4" />
+            </a>
+          </div>
         </div>
       </div>
     </section>
   );
-};
+}
 
-export default FAQ;
+// Individual FAQ Item component with animations

@@ -3,12 +3,12 @@ import { ServiceDataType } from "@/types/types";
 import {
   Globe,
   Palette,
-  Smartphone,
   Users,
   ChartNoAxesCombined,
   NotebookPen,
   MonitorCog,
   ServerCog,
+  BookCopy,
 } from "lucide-react";
 
 export const servicesData: ServiceDataType[] = [
@@ -25,10 +25,10 @@ export const servicesData: ServiceDataType[] = [
     icon: ChartNoAxesCombined,
   },
   {
-    title: "App Development",
+    title: "Professional Courses",
     description:
-      "Build powerful, user-friendly applications for web and mobile platforms.",
-    icon: Smartphone,
+      "Learn from a wide range of courses to enhance your skills and knowledge.",
+    icon: BookCopy,
   },
   {
     title: "UI/UX Design",

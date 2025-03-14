@@ -10,7 +10,7 @@ const About = () => {
           <h2 className="pb-3 text-base font-semibold tracking-wide text-indigo-600 uppercase md:pb-4">
             About Us
           </h2>
-          <p className="mt-2 text-3xl font-extrabold leading-12 tracking-tight text-gray-900 capitalize sm:text-4xl dark:text-slate-200">
+          <p className="mt-2 text-3xl font-extrabold leading-10 tracking-tight text-gray-900 capitalize sm:text-4xl dark:text-slate-200">
             A place of Creative and Inovation for Your Business
           </p>
           <p className="max-w-2xl mt-4 text-xl text-gray-500 lg:mx-auto dark:text-slate-300">

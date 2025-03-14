@@ -24,3 +24,9 @@ export interface TamplatesType {
   category?: string;
   link?: string;
 }
+
+export type FAQItemType = {
+  question: string;
+  answer: string;
+  category: string;
+};
