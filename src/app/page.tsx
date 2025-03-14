@@ -1,11 +1,10 @@
-import { AnimatedTestimonialsDemo } from "@/components/AnimatedTestimonialsDemo";
 import FAQ from "@/components/FAQ";
 import AboutUs from "@/components/home/AboutUs";
 import HomeHero from "@/components/home/HomeHero";
 import Services from "@/components/home/Services";
 import WhyChooseUs from "@/components/home/WhyChooseUs";
 import NewsLetter from "@/components/NewsLetter";
-import Testimonial from "@/components/Testimonials";
+import Testimonials from "@/components/Testimonials";
 
 const page = () => {
   return (
@@ -14,8 +13,7 @@ const page = () => {
       <AboutUs />
       <Services />
       <WhyChooseUs />
-      <AnimatedTestimonialsDemo />
-      <Testimonial />
+      <Testimonials />
       <NewsLetter />
       <FAQ />
     </>

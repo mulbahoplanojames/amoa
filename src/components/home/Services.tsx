@@ -11,7 +11,7 @@ import {
 const Services = () => {
   return (
     <>
-      <section className="md:pb-20 pt-12 py-16  bg-[url(/common-bg.svg)] bg-cover relative bg-bottom">
+      <section className="md:pb-20 pt-8 py-16  bg-[url(/common-bg.svg)] bg-cover relative bg-bottom">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="lg:text-center">
             <h2 className="text-base text-indigo-600 font-semibold tracking-wide uppercase ">
