@@ -1,12 +1,13 @@
-import About from "@/components/about/About";
 import AboutHero from "@/components/about/AboutHero";
-import React from "react";
+import AboutStorySection from "@/components/about/AboutStorySection";
+import ValuesSection from "@/components/about/ValuesSection";
 
 const AboutPage = () => {
   return (
     <>
       <AboutHero />
-      <About />
+      <AboutStorySection />
+      <ValuesSection />
     </>
   );
 };
