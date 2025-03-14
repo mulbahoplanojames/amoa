@@ -4,7 +4,7 @@ import Link from "next/link";
 const AboutHero = () => {
   return (
     <>
-      <div className="px-4 pt-28 pb-14 text-center flex justify-center items-center flex-col   md:pb-16 md:pt-36 md:px-10  dark:text-gray-50 bg-slate-50">
+      <div className="px-4 pt-28 pb-14 text-center flex justify-center items-center flex-col  md:pb-16 md:pt-36 md:px-10  dark:text-gray-50 bg-slate-50">
         <h1 className="text-4xl font-bold leading-none sm:text-6xl xl:max-w-3xl dark:text-gray-50 text-center">
           Elevate Your Digital Presence with&nbsp;
           <span className="text-purple-800">AMOA Tech</span>
