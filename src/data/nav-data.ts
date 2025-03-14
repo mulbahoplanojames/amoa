@@ -18,6 +18,6 @@ export const navLinks = [
 
   {
     label: "Blogs",
-    path: "/#",
+    path: "/blog",
   },
 ];
