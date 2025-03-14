@@ -27,18 +27,17 @@ export default function FAQSection() {
   };
 
   return (
-    <section className="py-16 px-4 bg-gradient-to-b from-white to-blue-50">
+    <section className="py-16 px-4 bg-gradient-to-b from-white to-purple-50">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-12 relative">
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-blue-100 rounded-full opacity-50 blur-xl" />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-purple-200 rounded-full opacity-50 blur-xl" />
 
           <h2 className="text-3xl md:text-4xl font-bold mb-4 relative">
             Frequently Asked Questions
           </h2>
 
           <p className="text-gray-600 max-w-2xl mx-auto relative">
-            Find answers to the most common questions about our products,
-            shipping, returns, and more.
+            Find answers to the most common questions about AMOA.
           </p>
         </div>
 
@@ -78,7 +77,7 @@ export default function FAQSection() {
           </div>
         ) : (
           <Tabs defaultValue={categories[0]} className="w-full">
-            <TabsList className="grid grid-cols-5 md:grid-cols-6 mb-3 bg-blue-50 p-1 rounded-lg">
+            <TabsList className="grid grid-cols-5 md:grid-cols-6 mb-3 bg-purple-50 p-1 rounded-lg">
               {categories.map((category) => (
                 <TabsTrigger
                   key={category}
@@ -119,9 +118,9 @@ export default function FAQSection() {
         )}
 
         {/* Contact section */}
-        <div className="mt-8 p-6 bg-blue-600 text-white rounded-xl shadow-lg relative overflow-hidden">
-          <div className="absolute top-0 right-0 w-64 h-64 bg-blue-500 rounded-full -mr-32 -mt-32 opacity-50" />
-          <div className="absolute bottom-0 left-0 w-40 h-40 bg-blue-700 rounded-full -ml-20 -mb-20 opacity-50" />
+        <div className="mt-8 p-6 bg-purple-600 text-white rounded-xl shadow-lg relative overflow-hidden">
+          <div className="absolute top-0 right-0 w-64 h-64 bg-purple-500 rounded-full -mr-32 -mt-32 opacity-50" />
+          <div className="absolute bottom-0 left-0 w-40 h-40 bg-purple-700 rounded-full -ml-20 -mb-20 opacity-50" />
 
           <div className="relative">
             <h3 className="text-xl font-bold mb-2">Still Have Questions?</h3>
@@ -131,7 +130,7 @@ export default function FAQSection() {
             </p>
             <a
               href="#contact"
-              className="inline-flex items-center bg-white text-blue-600 px-4 py-2 rounded-lg font-medium hover:bg-blue-50 transition-colors"
+              className="inline-flex items-center bg-white text-purple-600 px-4 py-2 rounded-lg font-medium hover:bg-purple-50 transition-colors"
             >
               Get in touch
               <ChevronRight className="ml-1 h-4 w-4" />

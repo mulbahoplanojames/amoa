@@ -5,10 +5,10 @@ export interface ServiceDataType {
 }
 
 export interface TestimonialType {
-  content: string;
-  author: string;
-  role: string;
-  image: string;
+  quote: string;
+  name: string;
+  designation: string;
+  src: string;
 }
 
 export interface FaqListType {

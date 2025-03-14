@@ -25,7 +25,7 @@ const Navbar = () => {
   return (
     <>
       <nav
-        className={` flex justify-between items-center py-4 md:px-10 px-4 fixed z-50 w-full top-0  bg-white shadow-lg`}
+        className={` flex justify-between items-center py-4 md:px-10 px-4 fixed z-[9999] w-full top-0  bg-white shadow-lg`}
       >
         <Link
           href="/"

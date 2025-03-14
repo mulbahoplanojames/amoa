@@ -15,7 +15,7 @@ export const faqItems: FAQItemType[] = [
     question: "Can you redesign my existing website or app?",
     answer:
       "Absolutely! Whether you need a complete overhaul or minor improvements, we can revamp your website or app with modern designs, improved performance, and enhanced user experience.",
-    category: "web app development",
+    category: "web-apps & websites",
   },
   {
     question: "How long does it take to complete a project?",
@@ -27,7 +27,7 @@ export const faqItems: FAQItemType[] = [
     question: "Will my website be mobile-friendly and SEO-optimized?",
     answer:
       "Yes! All our websites and applications are fully responsive, meaning they adapt seamlessly to different screen sizes. We also follow SEO best practices to enhance your search engine rankings.",
-    category: "web app development",
+    category: "web-apps & websites",
   },
   {
     question: " How much does a website or app cost?",

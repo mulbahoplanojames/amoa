@@ -1,3 +1,4 @@
+import { AnimatedTestimonialsDemo } from "@/components/AnimatedTestimonialsDemo";
 import FAQ from "@/components/FAQ";
 import AboutUs from "@/components/home/AboutUs";
 import HomeHero from "@/components/home/HomeHero";
@@ -13,6 +14,7 @@ const page = () => {
       <AboutUs />
       <Services />
       <WhyChooseUs />
+      <AnimatedTestimonialsDemo />
       <Testimonial />
       <NewsLetter />
       <FAQ />
