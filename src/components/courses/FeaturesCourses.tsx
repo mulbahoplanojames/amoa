@@ -11,7 +11,7 @@ import { Badge } from "../ui/badge";
 import { Calendar, Clock, Users } from "lucide-react";
 import { Button } from "../ui/button";
 import Link from "next/link";
-import { Course } from "@/app/(public)/courses/page";
+import { Course } from "@/types/types";
 
 interface FeaturedCoursesProps {
   featuredCourses: Course[];

@@ -3,7 +3,9 @@ export default function MapSection() {
     <section className="py-12 bg-gray-50">
       <div className="container mx-auto px-2">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold mb-8 text-center">Find Us</h2>
+          <h2 className="text-3xl font-bold mb-8 text-center text-black">
+            Find Us
+          </h2>
 
           <div className="bg-white p-4 rounded-lg shadow-md">
             <div className="aspect-[16/9] w-full bg-gray-200 rounded-lg overflow-hidden">

@@ -32,7 +32,7 @@ export default function FAQSection() {
         <div className="text-center mb-12 relative">
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-purple-200 rounded-full opacity-50 blur-xl" />
 
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 relative">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 relative dark:text-black">
             Frequently Asked Questions
           </h2>
 

@@ -30,3 +30,16 @@ export type FAQItemType = {
   answer: string;
   category: string;
 };
+
+export interface Course {
+  id: number;
+  image: string;
+  title: string;
+  level: string;
+  description: string;
+  duration: string;
+  startDate: string;
+  students: number;
+  tags: string[];
+  featured: boolean;
+}

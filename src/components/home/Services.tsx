@@ -20,7 +20,7 @@ const Services = () => {
             <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl dark:text-white">
               Everything you need to succeed online
             </p>
-            <p className="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
+            <p className="mt-4 max-w-2xl text-xl text-gray-500 dark:text-slate-300 lg:mx-auto">
               From concept to execution, we provide end-to-end digital solutions
               tailored to your unique needs.
             </p>

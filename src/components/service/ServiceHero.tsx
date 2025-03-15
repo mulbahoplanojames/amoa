@@ -4,11 +4,11 @@ import Link from "next/link";
 const ServiceHero = () => {
   return (
     <>
-      <div className="px-4 pt-28 pb-14 bg-slate-50 text-center flex justify-center items-center flex-col   md:pb-18 md:pt-36 md:px-10  dark:text-gray-50">
-        <h1 className="text-4xl font-bold leading-none sm:text-6xl xl:max-w-3xl dark:text-gray-50 text-center">
+      <div className="px-4 pt-28 pb-14 bg-slate-50 text-center flex justify-center items-center flex-col   md:pb-18 md:pt-36 md:px-10  ">
+        <h1 className="text-4xl font-bold leading-none sm:text-6xl xl:max-w-3xl text-black text-center">
           Our Services
         </h1>
-        <p className="mt-6 mb-8 text-base md:text-lg sm:mb-6 xl:max-w-3xl dark:text-gray-50">
+        <p className="mt-6 mb-8 text-base md:text-lg sm:mb-6 xl:max-w-3xl dark:text-gray-700">
           From custom websites to powerful applications, AMOA Tech delivers
           cutting-edge solutions tailored to your business needs and
           professional courses to enhance your skills.
@@ -24,7 +24,7 @@ const ServiceHero = () => {
           <Link
             href="/templates"
             type="button"
-            className="md:px-8 px-3 py-2 md:m-2 text-lg border rounded dark:border-gray-300 dark:text-gray-50"
+            className="md:px-8 px-3 py-2 md:m-2 text-lg border rounded dark:border-gray-300 dark:text-gray-700"
           >
             Our Templates
           </Link>
