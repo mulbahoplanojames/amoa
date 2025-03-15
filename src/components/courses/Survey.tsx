@@ -7,7 +7,7 @@ import React from "react";
 const Survey = () => {
   return (
     <>
-      <section className="mt-20 bg-muted/50 rounded-xl p-8 md:p-12">
+      <section className="mt-20 bg-muted/50 rounded-xl p-8 md:p-12 container mx-auto px-2 ">
         <div className="md:flex items-center justify-between">
           <div className="md:w-2/3 mb-6 md:mb-0 md:pr-8">
             <h2 className="text-3xl font-bold mb-4">

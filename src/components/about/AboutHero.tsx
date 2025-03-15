@@ -5,11 +5,11 @@ const AboutHero = () => {
   return (
     <>
       <div className="px-4 pt-28 pb-14 text-center flex justify-center items-center flex-col  md:pb-16 md:pt-36 md:px-10  dark:text-gray-50 bg-slate-50">
-        <h1 className="text-4xl font-bold leading-none sm:text-6xl xl:max-w-3xl dark:text-gray-50 text-center">
+        <h1 className="text-4xl font-bold leading-none sm:text-6xl xl:max-w-3xl dark:text-black text-center">
           Elevate Your Digital Presence with&nbsp;
           <span className="text-purple-800">AMOA Tech</span>
         </h1>
-        <p className="mt-6 mb-6 text-base md:text-lg sm:mb-12 xl:max-w-3xl dark:text-gray-50">
+        <p className="mt-6 mb-6 text-base md:text-lg sm:mb-12 xl:max-w-3xl dark:text-gray-700">
           At AMOA Tech, we craft stunning websites, powerful applications, offer
           professional courses, and seamless user experiences that drive
           results. Our expert team transforms your vision into a dynamic online
@@ -27,7 +27,7 @@ const AboutHero = () => {
           <Link
             href="/services"
             type="button"
-            className="md:px-8 px-3 py-2 md:m-2 text-lg border rounded dark:border-gray-300 dark:text-gray-50"
+            className="md:px-8 px-3 py-2 md:m-2 text-lg border rounded dark:border-gray-300 dark:text-gray-700"
           >
             Our Services
           </Link>

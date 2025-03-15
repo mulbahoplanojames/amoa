@@ -11,10 +11,10 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import FeaturesCourses from "@/components/courses/FeaturesCourses";
-import Survey from "./Survey";
 import { Course } from "@/types/types";
 import { courses } from "@/data/courses";
+import FeaturedCourses from "@/components/courses/FeaturedCourses";
+import Survey from "@/components/courses/Survey";
 
 export const metadata = {
   title: "Courses | TechFusion",
@@ -27,8 +27,8 @@ export default function CoursesPage() {
   const regularCourses: Course[] = courses.filter((course) => !course.featured);
 
   return (
-    <div className="container mx-auto px-4 py-12">
-      <div className="mb-12 text-center">
+    <div className="">
+      <div className="mb-12 text-center pt-32 pb-12 bg-slate-50">
         <h1 className="text-4xl font-bold mb-4">Our Tech Courses</h1>
         <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
           Advance your career with our industry-leading technology courses
@@ -37,18 +37,18 @@ export default function CoursesPage() {
       </div>
 
       {featuredCourses.length > 0 && (
-        <section className="mb-16">
+        <section className="mb-16 container mx-auto px-2 ">
           <h2 className="text-2xl font-bold mb-8">Featured Courses</h2>
-          <FeaturesCourses featuredCourses={featuredCourses} />
+          <FeaturedCourses featuredCourses={featuredCourses} />
         </section>
       )}
 
-      <section>
+      <section className="container mx-auto px-2 ">
         <h2 className="text-2xl font-bold mb-8">All Courses</h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8  ">
           {regularCourses.map((course) => (
             <Card key={course.id} className="flex flex-col h-full">
-              <div className="relative h-48">
+              <div className="relative h-56">
                 <Image
                   src={course.image || "/placeholder.svg"}
                   alt={course.title}

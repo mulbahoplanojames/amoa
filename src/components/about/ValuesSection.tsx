@@ -59,7 +59,9 @@ export default function ValuesSection() {
     <section className="py-20 bg-gray-50">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-12">
-          <h2 className="text-3xl font-bold mb-4">Our Core Values</h2>
+          <h2 className="text-3xl font-bold mb-3 dark:text-black">
+            Our Core Values
+          </h2>
           <p className="text-lg text-gray-600">
             The principles that guide everything we do at AMOA
           </p>

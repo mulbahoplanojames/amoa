@@ -48,7 +48,7 @@ export default function FAQSection() {
           </div>
           <input
             type="text"
-            className="block w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg bg-white shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+            className="block w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg bg-white shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all dark:text-black"
             placeholder="Search for questions or keywords.."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}

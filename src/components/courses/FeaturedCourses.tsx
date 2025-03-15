@@ -17,7 +17,7 @@ interface FeaturedCoursesProps {
   featuredCourses: Course[];
 }
 
-const FeaturesCourses = ({ featuredCourses }: FeaturedCoursesProps) => {
+const FeaturedCourses = ({ featuredCourses }: FeaturedCoursesProps) => {
   return (
     <>
       <div className="grid md:grid-cols-2 gap-8">
@@ -84,4 +84,4 @@ const FeaturesCourses = ({ featuredCourses }: FeaturedCoursesProps) => {
   );
 };
 
-export default FeaturesCourses;
+export default FeaturedCourses;
