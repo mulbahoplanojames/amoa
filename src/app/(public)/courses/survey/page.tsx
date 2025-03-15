@@ -36,98 +36,16 @@ import {
 } from "@/components/ui/card";
 // import { toast } from "@/hooks/use-toast";
 import { Progress } from "@/components/ui/progress";
-
-const formSchema = z.object({
-  name: z.string().min(2, {
-    message: "Name must be at least 2 characters.",
-  }),
-  email: z.string().email({
-    message: "Please enter a valid email address.",
-  }),
-  age: z.string().refine((val) => !isNaN(Number(val)) && Number(val) >= 16, {
-    message: "Age must be at least 16.",
-  }),
-  phone: z.string().optional(),
-  department: z.string({
-    required_error: "Please select a department.",
-  }),
-  educationLevel: z.string({
-    required_error: "Please select your education level.",
-  }),
-  coursesInterested: z.array(z.string()).min(1, {
-    message: "Please select at least one course.",
-  }),
-  experienceLevel: z.string({
-    required_error: "Please select your experience level.",
-  }),
-  learningStyle: z.string({
-    required_error: "Please select your preferred learning style.",
-  }),
-  reasonForJoining: z.string().min(10, {
-    message: "Please provide a reason with at least 10 characters.",
-  }),
-  goals: z.string().min(10, {
-    message: "Please describe your goals with at least 10 characters.",
-  }),
-  heardFrom: z.string({
-    required_error: "Please tell us how you heard about us.",
-  }),
-  additionalComments: z.string().optional(),
-  termsAccepted: z.boolean().refine((val) => val === true, {
-    message: "You must accept the terms and conditions.",
-  }),
-});
-
-const courses = [
-  { id: "web-dev", label: "Advanced Web Development" },
-  { id: "machine-learning", label: "Machine Learning Fundamentals" },
-  { id: "cloud-devops", label: "Cloud Architecture & DevOps" },
-  { id: "mobile-dev", label: "Mobile App Development" },
-  { id: "blockchain", label: "Blockchain Development" },
-  { id: "ui-ux", label: "UI/UX Design Principles" },
-];
-
-// Define the steps
-const steps = [
-  {
-    id: "personal",
-    name: "Personal Information",
-    fields: ["name", "email", "age", "phone"],
-  },
-  {
-    id: "education",
-    name: "Educational Background",
-    fields: ["department", "educationLevel"],
-  },
-  {
-    id: "courses",
-    name: "Course Interests",
-    fields: ["coursesInterested"],
-  },
-  {
-    id: "experience",
-    name: "Experience & Preferences",
-    fields: ["experienceLevel", "learningStyle"],
-  },
-  {
-    id: "goals",
-    name: "Goals & Motivations",
-    fields: ["reasonForJoining", "goals"],
-  },
-  {
-    id: "additional",
-    name: "Additional Information",
-    fields: ["heardFrom", "additionalComments", "termsAccepted"],
-  },
-];
+import { surveyFormSchema } from "@/Schema/zod-schema";
+import { courses, steps } from "@/data/survey";
 
 export default function SurveyPage() {
   const [currentStep, setCurrentStep] = useState(0);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
 
-  const form = useForm<z.infer<typeof formSchema>>({
-    resolver: zodResolver(formSchema),
+  const form = useForm<z.infer<typeof surveyFormSchema>>({
+    resolver: zodResolver(surveyFormSchema),
     defaultValues: {
       name: "",
       email: "",
@@ -142,10 +60,10 @@ export default function SurveyPage() {
     mode: "onChange",
   });
 
-  async function onSubmit(values: z.infer<typeof formSchema>) {
+  async function onSubmit(values: z.infer<typeof surveyFormSchema>) {
     setIsSubmitting(true);
 
-    // Destructure all form values
+    // Destructuring all form values
     const {
       name,
       email,
@@ -168,7 +86,7 @@ export default function SurveyPage() {
       name,
       email,
       age,
-      phone: phone || undefined, // Only include if provided
+      phone: phone || undefined,
       department,
       educationLevel,
       coursesInterested,
@@ -177,13 +95,13 @@ export default function SurveyPage() {
       reasonForJoining,
       goals,
       heardFrom,
-      additionalComments: additionalComments || undefined, // Only include if provided
+      additionalComments: additionalComments || undefined,
       termsAccepted,
       submittedAt: new Date().toISOString(),
     };
+    console.log("Submission Data", submissionData);
 
     try {
-      // Replace with your actual API endpoint
       const response = await fetch(
         "https://your-backend-api.com/survey-submissions",
         {
@@ -196,12 +114,10 @@ export default function SurveyPage() {
       );
 
       if (!response.ok) {
-        // If the server responds with an error
         const errorData = await response.json().catch(() => null);
         throw new Error(errorData?.message || "Failed to submit survey");
       }
 
-      // Handle successful submission
       const data = await response.json();
       console.log("Submission successful:", data);
 
@@ -211,7 +127,6 @@ export default function SurveyPage() {
       //     title: "Survey submitted successfully!",
       //     description: "Thank you for your interest. We'll get back to you soon.",
       //   });
-      console.log("Submission successful:", data);
     } catch (error) {
       console.error("Error submitting survey:", error);
       setIsSubmitting(false);
@@ -231,7 +146,7 @@ export default function SurveyPage() {
   const validateStep = async () => {
     const fields = steps[currentStep].fields;
     const result = await form.trigger(
-      fields as (keyof z.infer<typeof formSchema>)[]
+      fields as (keyof z.infer<typeof surveyFormSchema>)[]
     );
     return result;
   };
@@ -263,7 +178,7 @@ export default function SurveyPage() {
   const progress = ((currentStep + 1) / steps.length) * 100;
 
   return (
-    <div className="container mx-auto px-4 py-12">
+    <div className="container mx-auto px-4 pb-12 pt-32 ">
       <div className="max-w-3xl mx-auto">
         <div className="mb-10 text-center">
           <h1 className="text-4xl font-bold mb-4">Course Interest Survey</h1>
@@ -417,25 +332,28 @@ export default function SurveyPage() {
                                 onValueChange={field.onChange}
                                 defaultValue={field.value}
                               >
-                                <FormControl>
+                                <FormControl className="w-full">
                                   <SelectTrigger>
                                     <SelectValue placeholder="Select your field" />
                                   </SelectTrigger>
                                 </FormControl>
                                 <SelectContent>
                                   <SelectItem value="computer-science">
-                                    Computer Science
+                                    Software Development
                                   </SelectItem>
+                                  <SelectItem value="design">Design</SelectItem>
                                   <SelectItem value="information-technology">
-                                    Information Technology
+                                    Networking
                                   </SelectItem>
                                   <SelectItem value="engineering">
-                                    Engineering
+                                    Data Science
                                   </SelectItem>
                                   <SelectItem value="business">
                                     Business
                                   </SelectItem>
-                                  <SelectItem value="design">Design</SelectItem>
+                                  <SelectItem value="business">
+                                    Information Technology
+                                  </SelectItem>
                                   <SelectItem value="other">Other</SelectItem>
                                 </SelectContent>
                               </Select>
@@ -453,7 +371,7 @@ export default function SurveyPage() {
                                 onValueChange={field.onChange}
                                 defaultValue={field.value}
                               >
-                                <FormControl>
+                                <FormControl className="w-full">
                                   <SelectTrigger>
                                     <SelectValue placeholder="Select your education level" />
                                   </SelectTrigger>
@@ -461,6 +379,9 @@ export default function SurveyPage() {
                                 <SelectContent>
                                   <SelectItem value="high-school">
                                     High School
+                                  </SelectItem>
+                                  <SelectItem value="bachelors">
+                                    Bachelor&apos;s Degree
                                   </SelectItem>
                                   <SelectItem value="associate">
                                     Associate Degree
@@ -549,7 +470,9 @@ export default function SurveyPage() {
                         name="experienceLevel"
                         render={({ field }) => (
                           <FormItem className="space-y-3">
-                            <FormLabel>Experience Level</FormLabel>
+                            <FormLabel className="pb-1 block">
+                              Experience Level
+                            </FormLabel>
                             <FormControl>
                               <RadioGroup
                                 onValueChange={field.onChange}
@@ -594,7 +517,9 @@ export default function SurveyPage() {
                         name="learningStyle"
                         render={({ field }) => (
                           <FormItem className="space-y-3">
-                            <FormLabel>Preferred Learning Style</FormLabel>
+                            <FormLabel className="pb-1 block">
+                              Preferred Learning Style
+                            </FormLabel>
                             <FormControl>
                               <RadioGroup
                                 onValueChange={field.onChange}
@@ -605,7 +530,7 @@ export default function SurveyPage() {
                                   <FormControl>
                                     <RadioGroupItem value="visual" />
                                   </FormControl>
-                                  <FormLabel className="font-normal">
+                                  <FormLabel className="font-normal ">
                                     Visual - Learn best through images,
                                     diagrams, and demonstrations
                                   </FormLabel>
@@ -654,7 +579,9 @@ export default function SurveyPage() {
                         name="reasonForJoining"
                         render={({ field }) => (
                           <FormItem>
-                            <FormLabel>Reason for Joining</FormLabel>
+                            <FormLabel className="pb-1 block">
+                              Reason for Joining
+                            </FormLabel>
                             <FormControl>
                               <Textarea
                                 placeholder="What motivated you to pursue this course?"
@@ -672,7 +599,9 @@ export default function SurveyPage() {
                         name="goals"
                         render={({ field }) => (
                           <FormItem>
-                            <FormLabel>Learning Goals</FormLabel>
+                            <FormLabel className="pb-1 block">
+                              Learning Goals
+                            </FormLabel>
                             <FormControl>
                               <Textarea
                                 placeholder="What specific skills or knowledge do you hope to gain?"
@@ -695,12 +624,14 @@ export default function SurveyPage() {
                         name="heardFrom"
                         render={({ field }) => (
                           <FormItem>
-                            <FormLabel>How did you hear about us?</FormLabel>
+                            <FormLabel className="pb-1 block">
+                              How did you hear about us?
+                            </FormLabel>
                             <Select
                               onValueChange={field.onChange}
                               defaultValue={field.value}
                             >
-                              <FormControl>
+                              <FormControl className="w-full">
                                 <SelectTrigger>
                                   <SelectValue placeholder="Select an option" />
                                 </SelectTrigger>
@@ -734,7 +665,7 @@ export default function SurveyPage() {
                         name="additionalComments"
                         render={({ field }) => (
                           <FormItem>
-                            <FormLabel>
+                            <FormLabel className="pb-1 block">
                               Additional Comments (Optional)
                             </FormLabel>
                             <FormControl>
