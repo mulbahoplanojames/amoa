@@ -29,7 +29,9 @@ export default function CoursesPage() {
   return (
     <div className="">
       <div className="mb-12 text-center pt-32 pb-12 bg-slate-50">
-        <h1 className="text-4xl font-bold mb-4">Our Tech Courses</h1>
+        <h1 className="text-4xl font-bold mb-4 dark:text-black">
+          Our Tech Courses
+        </h1>
         <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
           Advance your career with our industry-leading technology courses
           taught by experienced professionals.
