@@ -38,6 +38,8 @@ import {
 import { Progress } from "@/components/ui/progress";
 import { surveyFormSchema } from "@/Schema/zod-schema";
 import { courses, steps } from "@/data/survey";
+import axios from "axios";
+import { toast } from "react-hot-toast";
 
 export default function SurveyPage() {
   const [currentStep, setCurrentStep] = useState(0);
@@ -81,64 +83,43 @@ export default function SurveyPage() {
       termsAccepted,
     } = values;
 
-    // Prepare data for API submission
-    const submissionData = {
-      name,
-      email,
-      age,
-      phone: phone || undefined,
-      department,
-      educationLevel,
-      coursesInterested,
-      experienceLevel,
-      learningStyle,
-      reasonForJoining,
-      goals,
-      heardFrom,
-      additionalComments: additionalComments || undefined,
-      termsAccepted,
-      submittedAt: new Date().toISOString(),
-    };
-    console.log("Submission Data", submissionData);
+    // console.log("Submission Data", values);
 
     try {
-      const response = await fetch(
-        "https://your-backend-api.com/survey-submissions",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(submissionData),
-        }
-      );
+      const response = await axios.post("/api/survey", {
+        name,
+        email,
+        age,
+        phone: phone || undefined,
+        department,
+        educationLevel,
+        coursesInterested,
+        experienceLevel,
+        learningStyle,
+        reasonForJoining,
+        goals,
+        heardFrom,
+        additionalComments: additionalComments || undefined,
+        termsAccepted,
+      });
 
-      if (!response.ok) {
-        const errorData = await response.json().catch(() => null);
-        throw new Error(errorData?.message || "Failed to submit survey");
-      }
-
-      const data = await response.json();
+      const data = await response.data;
       console.log("Submission successful:", data);
+
+      if (response.status === 201 || response.status === 200) {
+        toast.success("Survey submitted successfully!");
+      } else {
+        toast.error("Your survey Submission failed!");
+      }
 
       setIsSubmitting(false);
       setIsSuccess(true);
-      //   toast({
-      //     title: "Survey submitted successfully!",
-      //     description: "Thank you for your interest. We'll get back to you soon.",
-      //   });
+
+      form.reset();
     } catch (error) {
       console.error("Error submitting survey:", error);
       setIsSubmitting(false);
-
-      //   toast({
-      //     title: "Submission failed",
-      //     description:
-      //       error instanceof Error
-      //         ? error.message
-      //         : "There was an error submitting your survey. Please try again.",
-      //     variant: "destructive",
-      //   });
+      toast.error("Your survey Submission failed!");
     }
   }
 
