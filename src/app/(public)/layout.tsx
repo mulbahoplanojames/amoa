@@ -4,6 +4,7 @@ import "../globals.css";
 import Navbar from "@/layout/Navbar/Navbar";
 import Footer from "@/layout/Footer/Footer";
 import { ThemeProvider } from "@/context/theme-provider";
+import { Toaster } from "react-hot-toast";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -43,6 +44,7 @@ export default function PublicLayout({
           <Navbar />
           <main className="flex-1">{children}</main>
           <Footer />
+          <Toaster position="top-right" toastOptions={{ duration: 5000 }} />
         </ThemeProvider>
       </body>
     </html>
