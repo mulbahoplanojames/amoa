@@ -62,7 +62,7 @@ const FeaturedCourses = ({ featuredCourses }: FeaturedCoursesProps) => {
                 </CardContent>
                 <CardFooter className="p-0 pt-4 flex justify-between items-center">
                   <div className="flex flex-wrap gap-2">
-                    {course.tags.slice(0, 2).map((tag) => (
+                    {course.tags.slice(0, 4).map((tag) => (
                       <Badge key={tag} variant="outline">
                         {tag}
                       </Badge>
