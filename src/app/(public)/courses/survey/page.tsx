@@ -89,7 +89,7 @@ export default function SurveyPage() {
       const response = await axios.post("/api/survey", {
         name,
         email,
-        age,
+        age: age || undefined,
         phone: phone || undefined,
         department,
         educationLevel,
@@ -271,7 +271,7 @@ export default function SurveyPage() {
                           name="age"
                           render={({ field }) => (
                             <FormItem>
-                              <FormLabel>Age</FormLabel>
+                              <FormLabel>Age (Optional)</FormLabel>
                               <FormControl>
                                 <Input placeholder="25" {...field} />
                               </FormControl>

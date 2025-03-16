@@ -52,3 +52,9 @@ export async function POST(request: Request) {
     );
   }
 }
+
+export async function GET() {
+  await connectToDatabase();
+  const surveys = await Survey.find();
+  return NextResponse.json({ surveys }, { status: 200 });
+}

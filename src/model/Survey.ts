@@ -22,8 +22,7 @@ const surveySchema = new mongoose.Schema(
     },
     age: {
       type: Number,
-      required: [true, "Age must be at least 16."],
-      min: [16, "Age must be at least 16."],
+      optional: true,
     },
     phone: {
       type: String,

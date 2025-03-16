@@ -11,9 +11,7 @@ export const surveyFormSchema = z.object({
   email: z.string().email({
     message: "Please enter a valid email address.",
   }),
-  age: z.string().refine((val) => !isNaN(Number(val)) && Number(val) >= 16, {
-    message: "Age must be at least 16.",
-  }),
+  age: z.string().optional(),
   phone: z.string().optional(),
   department: z.string({
     required_error: "Please select a department.",

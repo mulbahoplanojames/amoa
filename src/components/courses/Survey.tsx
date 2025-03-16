@@ -26,7 +26,7 @@ const Survey = () => {
           </div>
           <div className="md:w-1/3 relative h-60 md:h-80">
             <Image
-              src="/placeholder.svg?height=400&width=300"
+              src="/assets/ab3.jpg"
               alt="Student learning"
               fill
               className="object-cover rounded-lg"

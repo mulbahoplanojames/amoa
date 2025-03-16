@@ -1,10 +1,13 @@
 export const courses = [
   { id: "web-dev", label: "Advanced Web Development" },
   { id: "Backend Dev", label: "Backend Development" },
-  { id: "Python Dev", label: "Python Development" },
-  { id: "mobile-dev", label: "Mobile App Development" },
-  { id: "blockchain", label: "Blockchain Development" },
+  { id: "Python Dev", label: "Python Developer" },
   { id: "ui-ux", label: "UI/UX Design Principles" },
+  { id: "frontend-dev", label: "Front-End Developer" },
+  { id: "backend-dev", label: "Back-End Developer" },
+  { id: "network", label: "Network Engineer" },
+  { id: "data-science", label: "Data Science Fundamentals" },
+  { id: "graphic-design", label: "Graphic Designer" },
 ];
 
 export const steps = [
