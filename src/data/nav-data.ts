@@ -19,8 +19,8 @@ export const navLinks = [
     label: "Blogs",
     path: "/blog",
   },
-  {
-    label: "Student Courses",
-    path: "/courses",
-  },
+  // {
+  //   label: "Student Courses",
+  //   path: "/courses",
+  // },
 ];
