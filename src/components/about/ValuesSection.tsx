@@ -83,7 +83,9 @@ export default function ValuesSection() {
               <div className="inline-flex items-center justify-center w-16 h-16 bg-purple-50 rounded-full mb-6">
                 {value.icon}
               </div>
-              <h3 className="text-xl font-bold mb-3">{value.title}</h3>
+              <h3 className="text-xl font-bold mb-3 text-black">
+                {value.title}
+              </h3>
               <p className="text-gray-600">{value.description}</p>
             </motion.div>
           ))}
