@@ -3,7 +3,7 @@ import { PostCard } from "@/components/post-card";
 import { getAllPosts } from "@/lib/mdx";
 
 export const metadata = {
-  title: "Blog | AMOA",
+  title: "Blog",
   description: "Explore the latest articles and insights from our tech experts",
 };
 
