@@ -17,11 +17,48 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "AMOA Tech Solutions",
+  metadataBase: new URL("https://amoa-tech.vercel.app/"),
+  title: {
+    default: "AMOA Tech Solutions",
+    template: "%s - AMOA Tech Solution",
+  },
   description:
     "The AMOA Tech Solution is a platform  dedicated to being a hub of creativity and innovation, specializing in designing stunning websites and apps tailored to elevate your business. ",
   icons: {
-    icon: "/logo.webp",
+    icon: "@/app/favicon.ico",
+  },
+  keywords: [
+    "AMOA",
+    "AMOA Tech",
+    "AMOA Tech Solution",
+    "Tech",
+    "Solutions",
+    "website",
+    "design",
+    "development",
+    "app",
+    "innovation",
+    "creativity",
+    "business",
+    "elevate",
+    "tailored",
+    "stunning",
+    "hub",
+  ],
+  openGraph: {
+    title: "AMOA Tech Solutions",
+    description:
+      "The AMOA Tech Solution is a platform  dedicated to being a hub of creativity and innovation, specializing in designing stunning websites and apps tailored to elevate your business. ",
+    url: "https://amoa-tech.vercel.app/",
+    siteName: "AMOA Tech Solutions",
+    images: [
+      {
+        url: "https://amoa-tech.vercel.app/logo.webp",
+        width: 1200,
+        height: 630,
+        alt: "AMOA Tech Solutions",
+      },
+    ],
   },
 };
 

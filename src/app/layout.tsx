@@ -25,6 +25,8 @@ export const metadata: Metadata = {
   },
   keywords: [
     "AMOA",
+    "AMOA Tech",
+    "AMOA Tech Solution",
     "Tech",
     "Solutions",
     "website",
